@@ -468,17 +468,17 @@ namespace ROBOT_WINFORM
             byte[] buffer = new byte[1024];
             string receivedDataRobot = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
             string[] p = receivedDataRobot.Split(' ');
-            string receivedDataCamera = await SendReceiveData(CameraClient, $"TT,{TxtPart},{p[0]},{p[1]},{p[2]},{p[5]},{p[4]},{p[3]}", "Camera", buffer);
+            string receivedDataCamera = await SendReceiveData(CameraClient, $"TT,{TxtPart.Text},{p[0]},{p[1]},{p[2]},{p[5]},{p[4]},{p[3]}", "Camera", buffer);
             if (receivedDataCamera.Contains("TT,1"))
             {
-                MessageBox.Show("Training trigger part Pos {TxtPart} successfully");
-                poss[Convert.ToInt16(TxtPart) - 1, 0] = "1";
-                poss[Convert.ToInt16(TxtPart) - 1, 1] = string.Join(",", p);
+                MessageBox.Show($"Training trigger part Pos {TxtPart.Text} successfully");
+                poss[Convert.ToInt16(TxtPart.Text) - 1, 0] = "1";
+                poss[Convert.ToInt16(TxtPart.Text) - 1, 1] = string.Join(",", p);
             }
             else
             {
                 MessageBox.Show("Training fail");
-                poss[Convert.ToInt16(TxtPart) - 1, 0] = "0";
+                poss[Convert.ToInt16(TxtPart.Text) - 1, 0] = "0";
             }
         }
 
@@ -488,17 +488,17 @@ namespace ROBOT_WINFORM
             string receivedDataRobot = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
             string[] p = receivedDataRobot.Split(' ');
             fig = Convert.ToDouble(p[6]);
-            string receivedDataCamera = await SendReceiveData(CameraClient, $"TTR,{TxtPart},{p[0]},{p[1]},{p[2]},{p[5]},{p[4]},{p[3]}", "Camera", buffer);
+            string receivedDataCamera = await SendReceiveData(CameraClient, $"TTR,{TxtPart.Text},{p[0]},{p[1]},{p[2]},{p[5]},{p[4]},{p[3]}", "Camera", buffer);
             if (receivedDataCamera.Contains("TTR,1"))
             {
-                MessageBox.Show("Training pick, place part Pos {TxtPart} successfully");
-                poss[Convert.ToInt16(TxtPart) - 1, 2] = "1";
-                poss[Convert.ToInt16(TxtPart) - 1, 3] = string.Join(",", p);
+                MessageBox.Show($"Training pick, place part Pos {TxtPart.Text} successfully");
+                poss[Convert.ToInt16(TxtPart.Text) - 1, 2] = "1";
+                poss[Convert.ToInt16(TxtPart.Text) - 1, 3] = string.Join(",", p);
             }
             else
             {
                 MessageBox.Show("Training fail");
-                poss[Convert.ToInt16(TxtPart) - 1, 2] = "0";
+                poss[Convert.ToInt16(TxtPart.Text) - 1, 2] = "0";
             }
         }
 
@@ -509,18 +509,18 @@ namespace ROBOT_WINFORM
                 byte[] buffer = new byte[1024];
                 string receivedDataRobot = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
                 string[] p = receivedDataRobot.Split(' ');
-                string receivedDataCamera = await SendReceiveData(CameraClient, $"XT,{TxtPart},1,{p[0]},{p[1]},{p[2]},{p[5]},{p[4]},{p[3]}", "Camera", buffer);
+                string receivedDataCamera = await SendReceiveData(CameraClient, $"XT,{TxtPart.Text},1,{p[0]},{p[1]},{p[2]},{p[5]},{p[4]},{p[3]}", "Camera", buffer);
                 if (receivedDataCamera.Contains("XT,1"))
                 {
                     MessageBox.Show("OK");
-                    poss[Convert.ToInt16(TxtPart) - 1, 4] = "1";
+                    poss[Convert.ToInt16(TxtPart.Text) - 1, 4] = "1";
                     string NextPosition = receivedDataCamera.Substring(5);
-                    poss[Convert.ToInt16(TxtPart) - 1, 5] = NextPosition; //Dang Rx, Rz lech nhau
+                    poss[Convert.ToInt16(TxtPart.Text) - 1, 5] = NextPosition; //Dang Rx, Rz lech nhau
                 }
                 else
                 {
                     MessageBox.Show("Not find Pos Pick and Place");
-                    poss[Convert.ToInt16(TxtPart) - 1, 4] = "0";
+                    poss[Convert.ToInt16(TxtPart.Text) - 1, 4] = "0";
                 }
             }
             else
@@ -535,12 +535,17 @@ namespace ROBOT_WINFORM
             if (poss[Convert.ToInt16(TextPartRuntime) - 1, 4] == "1")
             {
                 byte[] buffer = new byte[1024];
-                await ActivateRobot(poss[Convert.ToInt16(TxtPart) - 1, 5],fig);
+                await ActivateRobot(poss[Convert.ToInt16(TxtPart.Text) - 1, 5], fig);
             }
             else
             {
                 MessageBox.Show("Haven't done find pick, place Pos");
             }
+        }
+
+        private void Setting_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
