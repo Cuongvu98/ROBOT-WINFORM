@@ -460,5 +460,20 @@ namespace ROBOT_WINFORM
             TxtRz.Text = p1[5];
             TxtF.Text = p1[6];
         }
+
+        private async void BtnTrainTrigger_Click(object sender, EventArgs e)
+        {
+            byte[] buffer = new byte[1024];
+            string receivedDataRobot = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
+            string[] p = receivedDataRobot.Split(' ');
+            string receivedDataCamera = await SendReceiveData(CameraClient, $"TT,{TxtPart},{p[0]},{p[1]},{p[2]},{p[5]},{p[4]},{p[3]}", "Camera", buffer);
+            if (receivedDataCamera.Contains("TT,1"))
+            {
+                MessageBox.Show("Training trigger part Pos {TxtPart} successfully");
+            } else
+            {
+                MessageBox.Show("Training fail");
+            }
+        }
     }
 }

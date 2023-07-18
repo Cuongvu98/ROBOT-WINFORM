@@ -84,12 +84,23 @@
             UpY = new Button();
             UpX = new Button();
             button1 = new Button();
+            BtnPosTrigger = new Button();
+            BtnMovePick = new Button();
+            BtnTriggerPick = new Button();
+            BtnTrainTrigger = new Button();
+            BtnTraningPick = new Button();
+            textPartRuntime = new TextBox();
+            TxtPart = new TextBox();
             StepRz = new TextBox();
             StepZ = new TextBox();
             StepY = new TextBox();
             StepX = new TextBox();
+            label23 = new Label();
+            label20 = new Label();
             label19 = new Label();
+            label22 = new Label();
             label14 = new Label();
+            label21 = new Label();
             tabPage2 = new TabPage();
             Setting.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -529,6 +540,11 @@
             tabPage1.Controls.Add(BtnSendR);
             tabPage1.Controls.Add(BtnGetCurPos);
             tabPage1.Controls.Add(label4);
+            tabPage1.Controls.Add(BtnPosTrigger);
+            tabPage1.Controls.Add(BtnMovePick);
+            tabPage1.Controls.Add(BtnTriggerPick);
+            tabPage1.Controls.Add(BtnTrainTrigger);
+            tabPage1.Controls.Add(BtnTraningPick);
             tabPage1.Controls.Add(BtnConRobot);
             tabPage1.Controls.Add(BtnSentCam);
             tabPage1.Controls.Add(TxtPortRobot);
@@ -545,7 +561,9 @@
             tabPage1.Controls.Add(TxtY);
             tabPage1.Controls.Add(TxtIpCam);
             tabPage1.Controls.Add(label18);
+            tabPage1.Controls.Add(textPartRuntime);
             tabPage1.Controls.Add(BtnConCam);
+            tabPage1.Controls.Add(TxtPart);
             tabPage1.Controls.Add(StepRz);
             tabPage1.Controls.Add(StepZ);
             tabPage1.Controls.Add(StepY);
@@ -562,11 +580,15 @@
             tabPage1.Controls.Add(BtnConCamR);
             tabPage1.Controls.Add(label2);
             tabPage1.Controls.Add(TxtCommandR);
+            tabPage1.Controls.Add(label23);
             tabPage1.Controls.Add(label10);
+            tabPage1.Controls.Add(label20);
             tabPage1.Controls.Add(label1);
             tabPage1.Controls.Add(label19);
             tabPage1.Controls.Add(label8);
+            tabPage1.Controls.Add(label22);
             tabPage1.Controls.Add(label14);
+            tabPage1.Controls.Add(label21);
             tabPage1.Controls.Add(label3);
             tabPage1.Controls.Add(label9);
             tabPage1.Controls.Add(label7);
@@ -678,6 +700,76 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += BtnDisRobot_Click;
             // 
+            // BtnPosTrigger
+            // 
+            BtnPosTrigger.Location = new Point(86, 494);
+            BtnPosTrigger.Name = "BtnPosTrigger";
+            BtnPosTrigger.Size = new Size(68, 56);
+            BtnPosTrigger.TabIndex = 2;
+            BtnPosTrigger.Text = "Move Pos trigger";
+            BtnPosTrigger.UseVisualStyleBackColor = true;
+            BtnPosTrigger.Click += BtnConRobot_Click;
+            // 
+            // BtnMovePick
+            // 
+            BtnMovePick.Location = new Point(248, 494);
+            BtnMovePick.Name = "BtnMovePick";
+            BtnMovePick.Size = new Size(79, 55);
+            BtnMovePick.TabIndex = 2;
+            BtnMovePick.Text = "Move to Pick Place";
+            BtnMovePick.UseVisualStyleBackColor = true;
+            BtnMovePick.Click += BtnConRobot_Click;
+            // 
+            // BtnTriggerPick
+            // 
+            BtnTriggerPick.Location = new Point(163, 494);
+            BtnTriggerPick.Name = "BtnTriggerPick";
+            BtnTriggerPick.Size = new Size(79, 55);
+            BtnTriggerPick.TabIndex = 2;
+            BtnTriggerPick.Text = "Trigger";
+            BtnTriggerPick.UseVisualStyleBackColor = true;
+            BtnTriggerPick.Click += BtnConRobot_Click;
+            // 
+            // BtnTrainTrigger
+            // 
+            BtnTrainTrigger.Location = new Point(86, 391);
+            BtnTrainTrigger.Name = "BtnTrainTrigger";
+            BtnTrainTrigger.Size = new Size(68, 56);
+            BtnTrainTrigger.TabIndex = 2;
+            BtnTrainTrigger.Text = "Trigger Pos";
+            BtnTrainTrigger.UseVisualStyleBackColor = true;
+            BtnTrainTrigger.Click += BtnTrainTrigger_Click;
+            // 
+            // BtnTraningPick
+            // 
+            BtnTraningPick.Location = new Point(163, 392);
+            BtnTraningPick.Name = "BtnTraningPick";
+            BtnTraningPick.Size = new Size(79, 55);
+            BtnTraningPick.TabIndex = 2;
+            BtnTraningPick.Text = "Pick Place Pos";
+            BtnTraningPick.UseVisualStyleBackColor = true;
+            BtnTraningPick.Click += BtnConRobot_Click;
+            // 
+            // textPartRuntime
+            // 
+            textPartRuntime.Location = new Point(18, 516);
+            textPartRuntime.Multiline = true;
+            textPartRuntime.Name = "textPartRuntime";
+            textPartRuntime.Size = new Size(50, 23);
+            textPartRuntime.TabIndex = 1;
+            textPartRuntime.Text = "1";
+            textPartRuntime.TextAlign = HorizontalAlignment.Center;
+            // 
+            // TxtPart
+            // 
+            TxtPart.Location = new Point(18, 409);
+            TxtPart.Multiline = true;
+            TxtPart.Name = "TxtPart";
+            TxtPart.Size = new Size(50, 23);
+            TxtPart.TabIndex = 1;
+            TxtPart.Text = "1";
+            TxtPart.TextAlign = HorizontalAlignment.Center;
+            // 
             // StepRz
             // 
             StepRz.Location = new Point(137, 209);
@@ -718,6 +810,24 @@
             StepX.Text = "3";
             StepX.TextAlign = HorizontalAlignment.Center;
             // 
+            // label23
+            // 
+            label23.AutoSize = true;
+            label23.Location = new Point(29, 498);
+            label23.Name = "label23";
+            label23.Size = new Size(28, 15);
+            label23.TabIndex = 0;
+            label23.Text = "Part";
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Location = new Point(29, 391);
+            label20.Name = "label20";
+            label20.Size = new Size(28, 15);
+            label20.TabIndex = 0;
+            label20.Text = "Part";
+            // 
             // label19
             // 
             label19.AutoSize = true;
@@ -727,6 +837,15 @@
             label19.TabIndex = 0;
             label19.Text = "Step move";
             // 
+            // label22
+            // 
+            label22.AutoSize = true;
+            label22.Location = new Point(17, 476);
+            label22.Name = "label22";
+            label22.Size = new Size(131, 15);
+            label22.TabIndex = 0;
+            label22.Text = "Runtime Pick and Place";
+            // 
             // label14
             // 
             label14.AutoSize = true;
@@ -735,6 +854,15 @@
             label14.Size = new Size(83, 15);
             label14.TabIndex = 0;
             label14.Text = "Camera AS200";
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Location = new Point(17, 373);
+            label21.Name = "label21";
+            label21.Size = new Size(128, 15);
+            label21.TabIndex = 0;
+            label21.Text = "Training Pick and Place";
             // 
             // tabPage2
             // 
@@ -826,5 +954,16 @@
         private TextBox StepY;
         private TextBox StepX;
         private Label label19;
+        private TextBox TxtPart;
+        private Button BtnTrainTrigger;
+        private Button BtnTraningPick;
+        private Label label20;
+        private Label label21;
+        private Button BtnPosTrigger;
+        private Button BtnTriggerPick;
+        private TextBox textPartRuntime;
+        private Label label23;
+        private Label label22;
+        private Button BtnMovePick;
     }
 }
