@@ -741,9 +741,9 @@
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(714, 584);
+            tabPage2.Size = new Size(713, 587);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "tabPage2";
+            tabPage2.Text = "Traning pick place";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // Form1
