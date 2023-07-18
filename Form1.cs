@@ -393,8 +393,6 @@ namespace ROBOT_WINFORM
             TxtF.Text = p1[6];
         }
 
-
-
         private async void UpZ_MouseDown(object sender, MouseEventArgs e)
         {
             byte[] buffer = new byte[1024];

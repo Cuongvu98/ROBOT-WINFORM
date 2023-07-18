@@ -75,22 +75,16 @@
             Setting = new TabControl();
             tabPage1 = new TabPage();
             DownRz = new Button();
-            button12 = new Button();
-            DownRX = new Button();
             DownZ = new Button();
             DownY = new Button();
             DownX = new Button();
             button2 = new Button();
             UpRz = new Button();
-            button11 = new Button();
-            UpRx = new Button();
             UpZ = new Button();
             UpY = new Button();
             UpX = new Button();
             button1 = new Button();
             StepRz = new TextBox();
-            StepRy = new TextBox();
-            StepRx = new TextBox();
             StepZ = new TextBox();
             StepY = new TextBox();
             StepX = new TextBox();
@@ -133,7 +127,7 @@
             // 
             TxtData.Enabled = false;
             TxtData.ImeMode = ImeMode.On;
-            TxtData.Location = new Point(342, 157);
+            TxtData.Location = new Point(348, 151);
             TxtData.MinimumSize = new Size(10, 10);
             TxtData.Multiline = true;
             TxtData.Name = "TxtData";
@@ -143,7 +137,7 @@
             // 
             // BtnClear
             // 
-            BtnClear.Location = new Point(612, 491);
+            BtnClear.Location = new Point(618, 485);
             BtnClear.Name = "BtnClear";
             BtnClear.Size = new Size(75, 23);
             BtnClear.TabIndex = 2;
@@ -256,7 +250,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(24, 153);
+            label7.Location = new Point(17, 124);
             label7.Name = "label7";
             label7.Size = new Size(14, 15);
             label7.TabIndex = 0;
@@ -265,7 +259,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(46, 132);
+            label8.Location = new Point(39, 103);
             label8.Name = "label8";
             label8.Size = new Size(93, 15);
             label8.TabIndex = 0;
@@ -273,7 +267,7 @@
             // 
             // TxtX
             // 
-            TxtX.Location = new Point(46, 150);
+            TxtX.Location = new Point(39, 121);
             TxtX.Multiline = true;
             TxtX.Name = "TxtX";
             TxtX.Size = new Size(93, 23);
@@ -282,7 +276,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(24, 182);
+            label9.Location = new Point(17, 153);
             label9.Name = "label9";
             label9.Size = new Size(14, 15);
             label9.TabIndex = 0;
@@ -290,7 +284,7 @@
             // 
             // TxtY
             // 
-            TxtY.Location = new Point(44, 179);
+            TxtY.Location = new Point(37, 150);
             TxtY.Multiline = true;
             TxtY.Name = "TxtY";
             TxtY.Size = new Size(93, 23);
@@ -299,7 +293,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(24, 211);
+            label10.Location = new Point(17, 182);
             label10.Name = "label10";
             label10.Size = new Size(14, 15);
             label10.TabIndex = 0;
@@ -307,7 +301,7 @@
             // 
             // TxtZ
             // 
-            TxtZ.Location = new Point(44, 208);
+            TxtZ.Location = new Point(37, 179);
             TxtZ.Multiline = true;
             TxtZ.Name = "TxtZ";
             TxtZ.Size = new Size(93, 23);
@@ -316,7 +310,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(24, 240);
+            label11.Location = new Point(17, 269);
             label11.Name = "label11";
             label11.Size = new Size(20, 15);
             label11.TabIndex = 0;
@@ -324,7 +318,7 @@
             // 
             // TxtRx
             // 
-            TxtRx.Location = new Point(44, 237);
+            TxtRx.Location = new Point(37, 266);
             TxtRx.Multiline = true;
             TxtRx.Name = "TxtRx";
             TxtRx.Size = new Size(93, 23);
@@ -333,7 +327,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(24, 269);
+            label12.Location = new Point(17, 240);
             label12.Name = "label12";
             label12.Size = new Size(20, 15);
             label12.TabIndex = 0;
@@ -341,7 +335,7 @@
             // 
             // TxtRy
             // 
-            TxtRy.Location = new Point(44, 266);
+            TxtRy.Location = new Point(37, 237);
             TxtRy.Multiline = true;
             TxtRy.Name = "TxtRy";
             TxtRy.Size = new Size(93, 23);
@@ -350,7 +344,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(24, 298);
+            label13.Location = new Point(17, 211);
             label13.Name = "label13";
             label13.Size = new Size(19, 15);
             label13.TabIndex = 0;
@@ -358,7 +352,7 @@
             // 
             // TxtRz
             // 
-            TxtRz.Location = new Point(44, 295);
+            TxtRz.Location = new Point(37, 208);
             TxtRz.Multiline = true;
             TxtRz.Name = "TxtRz";
             TxtRz.Size = new Size(93, 23);
@@ -366,7 +360,7 @@
             // 
             // BtnAutoCal
             // 
-            BtnAutoCal.Location = new Point(143, 353);
+            BtnAutoCal.Location = new Point(137, 295);
             BtnAutoCal.Name = "BtnAutoCal";
             BtnAutoCal.Size = new Size(144, 23);
             BtnAutoCal.TabIndex = 2;
@@ -376,9 +370,9 @@
             // 
             // BtnGetCurPos
             // 
-            BtnGetCurPos.Location = new Point(46, 353);
+            BtnGetCurPos.Location = new Point(137, 265);
             BtnGetCurPos.Name = "BtnGetCurPos";
-            BtnGetCurPos.Size = new Size(88, 23);
+            BtnGetCurPos.Size = new Size(144, 23);
             BtnGetCurPos.TabIndex = 2;
             BtnGetCurPos.Text = "Get CurPos";
             BtnGetCurPos.UseVisualStyleBackColor = true;
@@ -386,7 +380,7 @@
             // 
             // BtnMovePos
             // 
-            BtnMovePos.Location = new Point(143, 324);
+            BtnMovePos.Location = new Point(137, 237);
             BtnMovePos.Name = "BtnMovePos";
             BtnMovePos.Size = new Size(144, 23);
             BtnMovePos.TabIndex = 2;
@@ -397,7 +391,7 @@
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(397, 499);
+            label15.Location = new Point(406, 489);
             label15.Name = "label15";
             label15.Size = new Size(80, 15);
             label15.TabIndex = 0;
@@ -406,7 +400,7 @@
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(342, 521);
+            label16.Location = new Point(348, 515);
             label16.Name = "label16";
             label16.Size = new Size(35, 15);
             label16.TabIndex = 0;
@@ -414,7 +408,7 @@
             // 
             // TxtPortCamR
             // 
-            TxtPortCamR.Location = new Point(383, 520);
+            TxtPortCamR.Location = new Point(389, 514);
             TxtPortCamR.Multiline = true;
             TxtPortCamR.Name = "TxtPortCamR";
             TxtPortCamR.Size = new Size(110, 23);
@@ -423,7 +417,7 @@
             // 
             // BtnConCamR
             // 
-            BtnConCamR.Location = new Point(499, 521);
+            BtnConCamR.Location = new Point(505, 515);
             BtnConCamR.Name = "BtnConCamR";
             BtnConCamR.Size = new Size(86, 23);
             BtnConCamR.TabIndex = 2;
@@ -434,7 +428,7 @@
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(445, 110);
+            label17.Location = new Point(451, 104);
             label17.Name = "label17";
             label17.Size = new Size(99, 15);
             label17.TabIndex = 0;
@@ -442,7 +436,7 @@
             // 
             // TxtCommand
             // 
-            TxtCommand.Location = new Point(342, 128);
+            TxtCommand.Location = new Point(348, 122);
             TxtCommand.Multiline = true;
             TxtCommand.Name = "TxtCommand";
             TxtCommand.Size = new Size(264, 23);
@@ -450,7 +444,7 @@
             // 
             // BtnSentCam
             // 
-            BtnSentCam.Location = new Point(612, 128);
+            BtnSentCam.Location = new Point(618, 122);
             BtnSentCam.Name = "BtnSentCam";
             BtnSentCam.Size = new Size(75, 23);
             BtnSentCam.TabIndex = 2;
@@ -460,7 +454,7 @@
             // 
             // TxtCommandR
             // 
-            TxtCommandR.Location = new Point(342, 550);
+            TxtCommandR.Location = new Point(348, 544);
             TxtCommandR.Multiline = true;
             TxtCommandR.Name = "TxtCommandR";
             TxtCommandR.Size = new Size(264, 23);
@@ -468,7 +462,7 @@
             // 
             // BtnSendR
             // 
-            BtnSendR.Location = new Point(612, 550);
+            BtnSendR.Location = new Point(618, 544);
             BtnSendR.Name = "BtnSendR";
             BtnSendR.Size = new Size(75, 23);
             BtnSendR.TabIndex = 2;
@@ -479,7 +473,7 @@
             // label18
             // 
             label18.AutoSize = true;
-            label18.Location = new Point(24, 327);
+            label18.Location = new Point(18, 298);
             label18.Name = "label18";
             label18.Size = new Size(13, 15);
             label18.TabIndex = 0;
@@ -487,7 +481,7 @@
             // 
             // TxtF
             // 
-            TxtF.Location = new Point(44, 324);
+            TxtF.Location = new Point(36, 295);
             TxtF.Multiline = true;
             TxtF.Name = "TxtF";
             TxtF.Size = new Size(93, 23);
@@ -495,7 +489,7 @@
             // 
             // BtnDisCamR
             // 
-            BtnDisCamR.Location = new Point(591, 520);
+            BtnDisCamR.Location = new Point(597, 514);
             BtnDisCamR.Name = "BtnDisCamR";
             BtnDisCamR.Size = new Size(96, 23);
             BtnDisCamR.TabIndex = 2;
@@ -508,25 +502,21 @@
             Setting.Controls.Add(tabPage1);
             Setting.Controls.Add(tabPage2);
             Setting.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            Setting.Location = new Point(3, 6);
+            Setting.Location = new Point(2, 1);
             Setting.Name = "Setting";
             Setting.SelectedIndex = 0;
-            Setting.Size = new Size(717, 612);
+            Setting.Size = new Size(721, 615);
             Setting.TabIndex = 3;
             // 
             // tabPage1
             // 
             tabPage1.Controls.Add(TxtData);
             tabPage1.Controls.Add(DownRz);
-            tabPage1.Controls.Add(button12);
-            tabPage1.Controls.Add(DownRX);
             tabPage1.Controls.Add(DownZ);
             tabPage1.Controls.Add(DownY);
             tabPage1.Controls.Add(DownX);
             tabPage1.Controls.Add(button2);
             tabPage1.Controls.Add(UpRz);
-            tabPage1.Controls.Add(button11);
-            tabPage1.Controls.Add(UpRx);
             tabPage1.Controls.Add(UpZ);
             tabPage1.Controls.Add(UpY);
             tabPage1.Controls.Add(UpX);
@@ -557,8 +547,6 @@
             tabPage1.Controls.Add(label18);
             tabPage1.Controls.Add(BtnConCam);
             tabPage1.Controls.Add(StepRz);
-            tabPage1.Controls.Add(StepRy);
-            tabPage1.Controls.Add(StepRx);
             tabPage1.Controls.Add(StepZ);
             tabPage1.Controls.Add(StepY);
             tabPage1.Controls.Add(StepX);
@@ -585,14 +573,14 @@
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(709, 584);
+            tabPage1.Size = new Size(713, 587);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Setting";
             tabPage1.UseVisualStyleBackColor = true;
             // 
             // DownRz
             // 
-            DownRz.Location = new Point(254, 295);
+            DownRz.Location = new Point(247, 209);
             DownRz.Name = "DownRz";
             DownRz.Size = new Size(33, 23);
             DownRz.TabIndex = 2;
@@ -600,29 +588,9 @@
             DownRz.UseVisualStyleBackColor = true;
             DownRz.Click += BtnDisRobot_Click;
             // 
-            // button12
-            // 
-            button12.Location = new Point(254, 266);
-            button12.Name = "button12";
-            button12.Size = new Size(33, 23);
-            button12.TabIndex = 2;
-            button12.Text = "-";
-            button12.UseVisualStyleBackColor = true;
-            button12.Click += BtnDisRobot_Click;
-            // 
-            // DownRX
-            // 
-            DownRX.Location = new Point(254, 237);
-            DownRX.Name = "DownRX";
-            DownRX.Size = new Size(33, 23);
-            DownRX.TabIndex = 2;
-            DownRX.Text = "-";
-            DownRX.UseVisualStyleBackColor = true;
-            DownRX.Click += BtnDisRobot_Click;
-            // 
             // DownZ
             // 
-            DownZ.Location = new Point(254, 208);
+            DownZ.Location = new Point(247, 179);
             DownZ.Name = "DownZ";
             DownZ.Size = new Size(33, 23);
             DownZ.TabIndex = 2;
@@ -632,7 +600,7 @@
             // 
             // DownY
             // 
-            DownY.Location = new Point(254, 179);
+            DownY.Location = new Point(247, 150);
             DownY.Name = "DownY";
             DownY.Size = new Size(33, 23);
             DownY.TabIndex = 2;
@@ -642,7 +610,7 @@
             // 
             // DownX
             // 
-            DownX.Location = new Point(254, 150);
+            DownX.Location = new Point(247, 121);
             DownX.Name = "DownX";
             DownX.Size = new Size(33, 23);
             DownX.TabIndex = 2;
@@ -652,7 +620,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(254, 150);
+            button2.Location = new Point(247, 121);
             button2.Name = "button2";
             button2.Size = new Size(33, 23);
             button2.TabIndex = 2;
@@ -662,7 +630,7 @@
             // 
             // UpRz
             // 
-            UpRz.Location = new Point(215, 295);
+            UpRz.Location = new Point(209, 209);
             UpRz.Name = "UpRz";
             UpRz.Size = new Size(33, 23);
             UpRz.TabIndex = 2;
@@ -670,29 +638,9 @@
             UpRz.UseVisualStyleBackColor = true;
             UpRz.Click += BtnDisRobot_Click;
             // 
-            // button11
-            // 
-            button11.Location = new Point(215, 266);
-            button11.Name = "button11";
-            button11.Size = new Size(33, 23);
-            button11.TabIndex = 2;
-            button11.Text = "+";
-            button11.UseVisualStyleBackColor = true;
-            button11.Click += BtnDisRobot_Click;
-            // 
-            // UpRx
-            // 
-            UpRx.Location = new Point(215, 237);
-            UpRx.Name = "UpRx";
-            UpRx.Size = new Size(33, 23);
-            UpRx.TabIndex = 2;
-            UpRx.Text = "+";
-            UpRx.UseVisualStyleBackColor = true;
-            UpRx.Click += BtnDisRobot_Click;
-            // 
             // UpZ
             // 
-            UpZ.Location = new Point(215, 208);
+            UpZ.Location = new Point(208, 179);
             UpZ.Name = "UpZ";
             UpZ.Size = new Size(33, 23);
             UpZ.TabIndex = 2;
@@ -702,7 +650,7 @@
             // 
             // UpY
             // 
-            UpY.Location = new Point(215, 179);
+            UpY.Location = new Point(208, 150);
             UpY.Name = "UpY";
             UpY.Size = new Size(33, 23);
             UpY.TabIndex = 2;
@@ -712,7 +660,7 @@
             // 
             // UpX
             // 
-            UpX.Location = new Point(215, 150);
+            UpX.Location = new Point(208, 121);
             UpX.Name = "UpX";
             UpX.Size = new Size(33, 23);
             UpX.TabIndex = 2;
@@ -722,7 +670,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(215, 150);
+            button1.Location = new Point(208, 121);
             button1.Name = "button1";
             button1.Size = new Size(33, 23);
             button1.TabIndex = 2;
@@ -732,7 +680,7 @@
             // 
             // StepRz
             // 
-            StepRz.Location = new Point(143, 294);
+            StepRz.Location = new Point(137, 209);
             StepRz.Multiline = true;
             StepRz.Name = "StepRz";
             StepRz.Size = new Size(65, 23);
@@ -740,29 +688,9 @@
             StepRz.Text = "2";
             StepRz.TextAlign = HorizontalAlignment.Center;
             // 
-            // StepRy
-            // 
-            StepRy.Location = new Point(143, 266);
-            StepRy.Multiline = true;
-            StepRy.Name = "StepRy";
-            StepRy.Size = new Size(65, 23);
-            StepRy.TabIndex = 1;
-            StepRy.Text = "2";
-            StepRy.TextAlign = HorizontalAlignment.Center;
-            // 
-            // StepRx
-            // 
-            StepRx.Location = new Point(143, 237);
-            StepRx.Multiline = true;
-            StepRx.Name = "StepRx";
-            StepRx.Size = new Size(65, 23);
-            StepRx.TabIndex = 1;
-            StepRx.Text = "2";
-            StepRx.TextAlign = HorizontalAlignment.Center;
-            // 
             // StepZ
             // 
-            StepZ.Location = new Point(143, 208);
+            StepZ.Location = new Point(136, 179);
             StepZ.Multiline = true;
             StepZ.Name = "StepZ";
             StepZ.Size = new Size(65, 23);
@@ -772,7 +700,7 @@
             // 
             // StepY
             // 
-            StepY.Location = new Point(143, 179);
+            StepY.Location = new Point(136, 150);
             StepY.Multiline = true;
             StepY.Name = "StepY";
             StepY.Size = new Size(65, 23);
@@ -782,7 +710,7 @@
             // 
             // StepX
             // 
-            StepX.Location = new Point(143, 150);
+            StepX.Location = new Point(136, 121);
             StepX.Multiline = true;
             StepX.Name = "StepX";
             StepX.Size = new Size(65, 23);
@@ -793,7 +721,7 @@
             // label19
             // 
             label19.AutoSize = true;
-            label19.Location = new Point(143, 131);
+            label19.Location = new Point(136, 102);
             label19.Name = "label19";
             label19.Size = new Size(63, 15);
             label19.TabIndex = 0;
@@ -813,7 +741,7 @@
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(725, 589);
+            tabPage2.Size = new Size(714, 584);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "tabPage2";
             tabPage2.UseVisualStyleBackColor = true;
@@ -872,7 +800,6 @@
         private TextBox textBox12;
         private TextBox TxtPortCamR;
         private Button BtnConCamR;
-        private Button DownRX;
         private Label label17;
         private TextBox TxtCommand;
         private Button BtnSentCam;
@@ -886,20 +813,15 @@
         private TabPage tabPage2;
         private Button button1;
         private Button DownRz;
-        private Button button12;
         private Button DownZ;
         private Button DownY;
         private Button DownX;
         private Button button2;
         private Button UpRz;
-        private Button button11;
-        private Button UpRx;
         private Button UpZ;
         private Button UpY;
         private Button UpX;
         private TextBox StepRz;
-        private TextBox StepRy;
-        private TextBox StepRx;
         private TextBox StepZ;
         private TextBox StepY;
         private TextBox StepX;
