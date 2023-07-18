@@ -89,7 +89,7 @@
             BtnTriggerPick = new Button();
             BtnTrainTrigger = new Button();
             BtnTraningPick = new Button();
-            textPartRuntime = new TextBox();
+            TextPartRuntime = new TextBox();
             TxtPart = new TextBox();
             StepRz = new TextBox();
             StepZ = new TextBox();
@@ -561,7 +561,7 @@
             tabPage1.Controls.Add(TxtY);
             tabPage1.Controls.Add(TxtIpCam);
             tabPage1.Controls.Add(label18);
-            tabPage1.Controls.Add(textPartRuntime);
+            tabPage1.Controls.Add(TextPartRuntime);
             tabPage1.Controls.Add(BtnConCam);
             tabPage1.Controls.Add(TxtPart);
             tabPage1.Controls.Add(StepRz);
@@ -718,7 +718,7 @@
             BtnMovePick.TabIndex = 2;
             BtnMovePick.Text = "Move to Pick Place";
             BtnMovePick.UseVisualStyleBackColor = true;
-            BtnMovePick.Click += BtnConRobot_Click;
+            BtnMovePick.Click += BtnMovePick_Click;
             // 
             // BtnTriggerPick
             // 
@@ -728,7 +728,7 @@
             BtnTriggerPick.TabIndex = 2;
             BtnTriggerPick.Text = "Trigger";
             BtnTriggerPick.UseVisualStyleBackColor = true;
-            BtnTriggerPick.Click += BtnConRobot_Click;
+            BtnTriggerPick.Click += BtnTriggerPick_Click;
             // 
             // BtnTrainTrigger
             // 
@@ -748,17 +748,17 @@
             BtnTraningPick.TabIndex = 2;
             BtnTraningPick.Text = "Pick Place Pos";
             BtnTraningPick.UseVisualStyleBackColor = true;
-            BtnTraningPick.Click += BtnConRobot_Click;
+            BtnTraningPick.Click += BtnTraningPick_Click;
             // 
-            // textPartRuntime
+            // TextPartRuntime
             // 
-            textPartRuntime.Location = new Point(18, 516);
-            textPartRuntime.Multiline = true;
-            textPartRuntime.Name = "textPartRuntime";
-            textPartRuntime.Size = new Size(50, 23);
-            textPartRuntime.TabIndex = 1;
-            textPartRuntime.Text = "1";
-            textPartRuntime.TextAlign = HorizontalAlignment.Center;
+            TextPartRuntime.Location = new Point(18, 516);
+            TextPartRuntime.Multiline = true;
+            TextPartRuntime.Name = "TextPartRuntime";
+            TextPartRuntime.Size = new Size(50, 23);
+            TextPartRuntime.TabIndex = 1;
+            TextPartRuntime.Text = "1";
+            TextPartRuntime.TextAlign = HorizontalAlignment.Center;
             // 
             // TxtPart
             // 
@@ -961,7 +961,7 @@
         private Label label21;
         private Button BtnPosTrigger;
         private Button BtnTriggerPick;
-        private TextBox textPartRuntime;
+        private TextBox TextPartRuntime;
         private Label label23;
         private Label label22;
         private Button BtnMovePick;

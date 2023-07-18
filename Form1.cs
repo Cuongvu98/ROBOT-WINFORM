@@ -19,6 +19,8 @@ namespace ROBOT_WINFORM
         private TcpClient CameraClient = new TcpClient();
         private TcpClient CameraClientR = new TcpClient();
         private TcpClient RobotClient = new TcpClient();
+        String[,] poss = new string[4, 6];
+        double fig;
 
         static void ConnectServer(string Ip, string Port, string NameDevice, ref TcpClient client)
         {
@@ -470,9 +472,74 @@ namespace ROBOT_WINFORM
             if (receivedDataCamera.Contains("TT,1"))
             {
                 MessageBox.Show("Training trigger part Pos {TxtPart} successfully");
-            } else
+                poss[Convert.ToInt16(TxtPart) - 1, 0] = "1";
+                poss[Convert.ToInt16(TxtPart) - 1, 1] = string.Join(",", p);
+            }
+            else
             {
                 MessageBox.Show("Training fail");
+                poss[Convert.ToInt16(TxtPart) - 1, 0] = "0";
+            }
+        }
+
+        private async void BtnTraningPick_Click(object sender, EventArgs e)
+        {
+            byte[] buffer = new byte[1024];
+            string receivedDataRobot = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
+            string[] p = receivedDataRobot.Split(' ');
+            fig = Convert.ToDouble(p[6]);
+            string receivedDataCamera = await SendReceiveData(CameraClient, $"TTR,{TxtPart},{p[0]},{p[1]},{p[2]},{p[5]},{p[4]},{p[3]}", "Camera", buffer);
+            if (receivedDataCamera.Contains("TTR,1"))
+            {
+                MessageBox.Show("Training pick, place part Pos {TxtPart} successfully");
+                poss[Convert.ToInt16(TxtPart) - 1, 2] = "1";
+                poss[Convert.ToInt16(TxtPart) - 1, 3] = string.Join(",", p);
+            }
+            else
+            {
+                MessageBox.Show("Training fail");
+                poss[Convert.ToInt16(TxtPart) - 1, 2] = "0";
+            }
+        }
+
+        private async void BtnTriggerPick_Click(object sender, EventArgs e)
+        {
+            if (poss[Convert.ToInt16(TextPartRuntime) - 1, 2] == "1")
+            {
+                byte[] buffer = new byte[1024];
+                string receivedDataRobot = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
+                string[] p = receivedDataRobot.Split(' ');
+                string receivedDataCamera = await SendReceiveData(CameraClient, $"XT,{TxtPart},1,{p[0]},{p[1]},{p[2]},{p[5]},{p[4]},{p[3]}", "Camera", buffer);
+                if (receivedDataCamera.Contains("XT,1"))
+                {
+                    MessageBox.Show("OK");
+                    poss[Convert.ToInt16(TxtPart) - 1, 4] = "1";
+                    string NextPosition = receivedDataCamera.Substring(5);
+                    poss[Convert.ToInt16(TxtPart) - 1, 5] = NextPosition; //Dang Rx, Rz lech nhau
+                }
+                else
+                {
+                    MessageBox.Show("Not find Pos Pick and Place");
+                    poss[Convert.ToInt16(TxtPart) - 1, 4] = "0";
+                }
+            }
+            else
+            {
+                MessageBox.Show("Pos trigger not training");
+            }
+        }
+
+        private async void BtnMovePick_Click(object sender, EventArgs e)
+        {
+
+            if (poss[Convert.ToInt16(TextPartRuntime) - 1, 4] == "1")
+            {
+                byte[] buffer = new byte[1024];
+                await ActivateRobot(poss[Convert.ToInt16(TxtPart) - 1, 5],fig);
+            }
+            else
+            {
+                MessageBox.Show("Haven't done find pick, place Pos");
             }
         }
     }
