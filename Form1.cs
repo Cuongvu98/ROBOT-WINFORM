@@ -11,10 +11,6 @@ namespace ROBOT_WINFORM
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-        }
-
 
         private TcpClient CameraClient = new TcpClient();
         private TcpClient CameraClientR = new TcpClient();
@@ -469,6 +465,9 @@ namespace ROBOT_WINFORM
         {
             byte[] buffer = new byte[1024];
             string receivedDataRobot = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
+            int LastIndex = receivedDataRobot.LastIndexOf(' ');
+            //fig = Convert.ToDouble(receivedDataRobot.Substring(LastIndex + 1));
+            receivedDataRobot = receivedDataRobot.Substring(0, LastIndex);
             string[] p = receivedDataRobot.Split(' ');
             string receivedDataCamera = await SendReceiveData(CameraClient, $"TT,{TxtPart.Text},{p[0]},{p[1]},{p[2]},{p[5]},{p[4]},{p[3]}", "Camera", buffer);
             if (receivedDataCamera.Contains("TT,1"))
@@ -488,8 +487,10 @@ namespace ROBOT_WINFORM
         {
             byte[] buffer = new byte[1024];
             string receivedDataRobot = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
+            int LastIndex = receivedDataRobot.LastIndexOf(' ');
+            fig = Convert.ToDouble(receivedDataRobot.Substring(LastIndex+1));
+            receivedDataRobot = receivedDataRobot.Substring(0, LastIndex);
             string[] p = receivedDataRobot.Split(' ');
-            fig = Convert.ToDouble(p[6]);
             string receivedDataCamera = await SendReceiveData(CameraClient, $"TTR,{TxtPart.Text},{p[0]},{p[1]},{p[2]},{p[5]},{p[4]},{p[3]}", "Camera", buffer);
             if (receivedDataCamera.Contains("TTR,1"))
             {
@@ -556,11 +557,6 @@ namespace ROBOT_WINFORM
             {
                 MessageBox.Show("Pos trigger not training");
             }
-        }
-
-        private void TxtIpRobot_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

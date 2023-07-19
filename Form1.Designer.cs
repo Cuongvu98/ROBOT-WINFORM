@@ -28,865 +28,863 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            TxtIpRobot = new TextBox();
-            BtnConRobot = new Button();
-            TxtData = new TextBox();
-            BtnClear = new Button();
-            label3 = new Label();
-            label2 = new Label();
-            TxtPortRobot = new TextBox();
-            BtnDisRobot = new Button();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            TxtIpCam = new TextBox();
-            TxtPortCam = new TextBox();
-            BtnConCam = new Button();
-            BtnDisCam = new Button();
-            label7 = new Label();
-            label8 = new Label();
-            TxtX = new TextBox();
-            label9 = new Label();
-            TxtY = new TextBox();
-            label10 = new Label();
-            TxtZ = new TextBox();
-            label11 = new Label();
-            TxtRx = new TextBox();
-            label12 = new Label();
-            TxtRy = new TextBox();
-            label13 = new Label();
-            TxtRz = new TextBox();
-            BtnAutoCal = new Button();
-            BtnGetCurPos = new Button();
-            BtnMovePos = new Button();
-            label15 = new Label();
-            label16 = new Label();
-            TxtPortCamR = new TextBox();
-            BtnConCamR = new Button();
-            label17 = new Label();
-            TxtCommand = new TextBox();
-            BtnSentCam = new Button();
-            TxtCommandR = new TextBox();
-            BtnSendR = new Button();
-            label18 = new Label();
-            TxtF = new TextBox();
-            BtnDisCamR = new Button();
-            Setting = new TabControl();
-            tabPage1 = new TabPage();
-            DownRz = new Button();
-            DownZ = new Button();
-            DownY = new Button();
-            DownX = new Button();
-            button2 = new Button();
-            UpRz = new Button();
-            UpZ = new Button();
-            UpY = new Button();
-            UpX = new Button();
-            button1 = new Button();
-            BtnMovePosTrigger = new Button();
-            BtnMovePick = new Button();
-            BtnTriggerPick = new Button();
-            BtnTrainTrigger = new Button();
-            BtnTraningPick = new Button();
-            TextPartRuntime = new TextBox();
-            TxtPart = new TextBox();
-            StepRz = new TextBox();
-            StepZ = new TextBox();
-            StepY = new TextBox();
-            StepX = new TextBox();
-            label23 = new Label();
-            label20 = new Label();
-            label19 = new Label();
-            label22 = new Label();
-            label14 = new Label();
-            label21 = new Label();
-            tabPage2 = new TabPage();
-            Setting.SuspendLayout();
-            tabPage1.SuspendLayout();
-            SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TxtIpRobot = new System.Windows.Forms.TextBox();
+            this.BtnConRobot = new System.Windows.Forms.Button();
+            this.TxtData = new System.Windows.Forms.TextBox();
+            this.BtnClear = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TxtPortRobot = new System.Windows.Forms.TextBox();
+            this.BtnDisRobot = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.TxtIpCam = new System.Windows.Forms.TextBox();
+            this.TxtPortCam = new System.Windows.Forms.TextBox();
+            this.BtnConCam = new System.Windows.Forms.Button();
+            this.BtnDisCam = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.TxtX = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.TxtY = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.TxtZ = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.TxtRx = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.TxtRy = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.TxtRz = new System.Windows.Forms.TextBox();
+            this.BtnAutoCal = new System.Windows.Forms.Button();
+            this.BtnGetCurPos = new System.Windows.Forms.Button();
+            this.BtnMovePos = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.TxtPortCamR = new System.Windows.Forms.TextBox();
+            this.BtnConCamR = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.TxtCommand = new System.Windows.Forms.TextBox();
+            this.BtnSentCam = new System.Windows.Forms.Button();
+            this.TxtCommandR = new System.Windows.Forms.TextBox();
+            this.BtnSendR = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.TxtF = new System.Windows.Forms.TextBox();
+            this.BtnDisCamR = new System.Windows.Forms.Button();
+            this.Setting = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.DownRz = new System.Windows.Forms.Button();
+            this.DownZ = new System.Windows.Forms.Button();
+            this.DownY = new System.Windows.Forms.Button();
+            this.DownX = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.UpRz = new System.Windows.Forms.Button();
+            this.UpZ = new System.Windows.Forms.Button();
+            this.UpY = new System.Windows.Forms.Button();
+            this.UpX = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.BtnMovePosTrigger = new System.Windows.Forms.Button();
+            this.BtnMovePick = new System.Windows.Forms.Button();
+            this.BtnTriggerPick = new System.Windows.Forms.Button();
+            this.BtnTrainTrigger = new System.Windows.Forms.Button();
+            this.BtnTraningPick = new System.Windows.Forms.Button();
+            this.TextPartRuntime = new System.Windows.Forms.TextBox();
+            this.TxtPart = new System.Windows.Forms.TextBox();
+            this.StepRz = new System.Windows.Forms.TextBox();
+            this.StepZ = new System.Windows.Forms.TextBox();
+            this.StepY = new System.Windows.Forms.TextBox();
+            this.StepX = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Setting.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(6, 41);
-            label1.Name = "label1";
-            label1.Size = new Size(17, 15);
-            label1.TabIndex = 0;
-            label1.Text = "IP";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(17, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "IP";
             // 
             // TxtIpRobot
             // 
-            TxtIpRobot.Location = new Point(44, 37);
-            TxtIpRobot.Multiline = true;
-            TxtIpRobot.Name = "TxtIpRobot";
-            TxtIpRobot.Size = new Size(119, 23);
-            TxtIpRobot.TabIndex = 1;
-            TxtIpRobot.Text = "172.20.90.110";
-            TxtIpRobot.TextChanged += TxtIpRobot_TextChanged;
+            this.TxtIpRobot.Location = new System.Drawing.Point(44, 37);
+            this.TxtIpRobot.Multiline = true;
+            this.TxtIpRobot.Name = "TxtIpRobot";
+            this.TxtIpRobot.Size = new System.Drawing.Size(119, 23);
+            this.TxtIpRobot.TabIndex = 1;
+            this.TxtIpRobot.Text = "192.168.1.30";
             // 
             // BtnConRobot
             // 
-            BtnConRobot.Location = new Point(174, 37);
-            BtnConRobot.Name = "BtnConRobot";
-            BtnConRobot.Size = new Size(75, 23);
-            BtnConRobot.TabIndex = 2;
-            BtnConRobot.Text = "Connect";
-            BtnConRobot.UseVisualStyleBackColor = true;
-            BtnConRobot.Click += BtnConRobot_Click;
+            this.BtnConRobot.Location = new System.Drawing.Point(174, 37);
+            this.BtnConRobot.Name = "BtnConRobot";
+            this.BtnConRobot.Size = new System.Drawing.Size(75, 23);
+            this.BtnConRobot.TabIndex = 2;
+            this.BtnConRobot.Text = "Connect";
+            this.BtnConRobot.UseVisualStyleBackColor = true;
+            this.BtnConRobot.Click += new System.EventHandler(this.BtnConRobot_Click);
             // 
             // TxtData
             // 
-            TxtData.Enabled = false;
-            TxtData.ImeMode = ImeMode.On;
-            TxtData.Location = new Point(348, 151);
-            TxtData.MinimumSize = new Size(10, 10);
-            TxtData.Multiline = true;
-            TxtData.Name = "TxtData";
-            TxtData.ScrollBars = ScrollBars.Vertical;
-            TxtData.Size = new Size(345, 328);
-            TxtData.TabIndex = 1;
+            this.TxtData.Enabled = false;
+            this.TxtData.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.TxtData.Location = new System.Drawing.Point(348, 151);
+            this.TxtData.MinimumSize = new System.Drawing.Size(10, 10);
+            this.TxtData.Multiline = true;
+            this.TxtData.Name = "TxtData";
+            this.TxtData.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.TxtData.Size = new System.Drawing.Size(345, 328);
+            this.TxtData.TabIndex = 1;
             // 
             // BtnClear
             // 
-            BtnClear.Location = new Point(618, 485);
-            BtnClear.Name = "BtnClear";
-            BtnClear.Size = new Size(75, 23);
-            BtnClear.TabIndex = 2;
-            BtnClear.Text = "Clear";
-            BtnClear.UseVisualStyleBackColor = true;
-            BtnClear.Click += BtnClear_Click;
+            this.BtnClear.Location = new System.Drawing.Point(618, 485);
+            this.BtnClear.Name = "BtnClear";
+            this.BtnClear.Size = new System.Drawing.Size(75, 23);
+            this.BtnClear.TabIndex = 2;
+            this.BtnClear.Text = "Clear";
+            this.BtnClear.UseVisualStyleBackColor = true;
+            this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(98, 12);
-            label3.Name = "label3";
-            label3.Size = new Size(39, 15);
-            label3.TabIndex = 0;
-            label3.Text = "Robot";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(98, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 15);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Robot";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(6, 69);
-            label2.Name = "label2";
-            label2.Size = new Size(35, 15);
-            label2.TabIndex = 0;
-            label2.Text = "PORT";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 69);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 15);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "PORT";
             // 
             // TxtPortRobot
             // 
-            TxtPortRobot.Location = new Point(44, 66);
-            TxtPortRobot.Multiline = true;
-            TxtPortRobot.Name = "TxtPortRobot";
-            TxtPortRobot.Size = new Size(119, 23);
-            TxtPortRobot.TabIndex = 1;
-            TxtPortRobot.Text = "5001";
+            this.TxtPortRobot.Location = new System.Drawing.Point(44, 66);
+            this.TxtPortRobot.Multiline = true;
+            this.TxtPortRobot.Name = "TxtPortRobot";
+            this.TxtPortRobot.Size = new System.Drawing.Size(119, 23);
+            this.TxtPortRobot.TabIndex = 1;
+            this.TxtPortRobot.Text = "5001";
             // 
             // BtnDisRobot
             // 
-            BtnDisRobot.Location = new Point(174, 66);
-            BtnDisRobot.Name = "BtnDisRobot";
-            BtnDisRobot.Size = new Size(75, 23);
-            BtnDisRobot.TabIndex = 2;
-            BtnDisRobot.Text = "Disconect";
-            BtnDisRobot.UseVisualStyleBackColor = true;
-            BtnDisRobot.Click += BtnDisRobot_Click;
+            this.BtnDisRobot.Location = new System.Drawing.Point(174, 66);
+            this.BtnDisRobot.Name = "BtnDisRobot";
+            this.BtnDisRobot.Size = new System.Drawing.Size(75, 23);
+            this.BtnDisRobot.TabIndex = 2;
+            this.BtnDisRobot.Text = "Disconect";
+            this.BtnDisRobot.UseVisualStyleBackColor = true;
+            this.BtnDisRobot.Click += new System.EventHandler(this.BtnDisRobot_Click);
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(383, 41);
-            label4.Name = "label4";
-            label4.Size = new Size(17, 15);
-            label4.TabIndex = 0;
-            label4.Text = "IP";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(383, 41);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(17, 15);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "IP";
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(134, -21);
-            label5.Name = "label5";
-            label5.Size = new Size(39, 15);
-            label5.TabIndex = 0;
-            label5.Text = "AS200";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(134, -21);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(39, 15);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "AS200";
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(380, 71);
-            label6.Name = "label6";
-            label6.Size = new Size(35, 15);
-            label6.TabIndex = 0;
-            label6.Text = "PORT";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(380, 71);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 15);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "PORT";
             // 
             // TxtIpCam
             // 
-            TxtIpCam.Location = new Point(424, 38);
-            TxtIpCam.Multiline = true;
-            TxtIpCam.Name = "TxtIpCam";
-            TxtIpCam.Size = new Size(134, 23);
-            TxtIpCam.TabIndex = 1;
-            TxtIpCam.Text = "172.20.90.110";
+            this.TxtIpCam.Location = new System.Drawing.Point(424, 38);
+            this.TxtIpCam.Multiline = true;
+            this.TxtIpCam.Name = "TxtIpCam";
+            this.TxtIpCam.Size = new System.Drawing.Size(134, 23);
+            this.TxtIpCam.TabIndex = 1;
+            this.TxtIpCam.Text = "192.168.1.10";
             // 
             // TxtPortCam
             // 
-            TxtPortCam.Location = new Point(424, 67);
-            TxtPortCam.Multiline = true;
-            TxtPortCam.Name = "TxtPortCam";
-            TxtPortCam.Size = new Size(134, 23);
-            TxtPortCam.TabIndex = 1;
-            TxtPortCam.Text = "5002";
+            this.TxtPortCam.Location = new System.Drawing.Point(424, 67);
+            this.TxtPortCam.Multiline = true;
+            this.TxtPortCam.Name = "TxtPortCam";
+            this.TxtPortCam.Size = new System.Drawing.Size(134, 23);
+            this.TxtPortCam.TabIndex = 1;
+            this.TxtPortCam.Text = "5001";
             // 
             // BtnConCam
             // 
-            BtnConCam.Location = new Point(574, 38);
-            BtnConCam.Name = "BtnConCam";
-            BtnConCam.Size = new Size(75, 23);
-            BtnConCam.TabIndex = 2;
-            BtnConCam.Text = "Connect";
-            BtnConCam.UseVisualStyleBackColor = true;
-            BtnConCam.Click += BtnConCam_Click;
+            this.BtnConCam.Location = new System.Drawing.Point(574, 38);
+            this.BtnConCam.Name = "BtnConCam";
+            this.BtnConCam.Size = new System.Drawing.Size(75, 23);
+            this.BtnConCam.TabIndex = 2;
+            this.BtnConCam.Text = "Connect";
+            this.BtnConCam.UseVisualStyleBackColor = true;
+            this.BtnConCam.Click += new System.EventHandler(this.BtnConCam_Click);
             // 
             // BtnDisCam
             // 
-            BtnDisCam.Location = new Point(574, 67);
-            BtnDisCam.Name = "BtnDisCam";
-            BtnDisCam.Size = new Size(75, 23);
-            BtnDisCam.TabIndex = 2;
-            BtnDisCam.Text = "Disconect";
-            BtnDisCam.UseVisualStyleBackColor = true;
-            BtnDisCam.Click += BtnDisCam_Click;
+            this.BtnDisCam.Location = new System.Drawing.Point(574, 67);
+            this.BtnDisCam.Name = "BtnDisCam";
+            this.BtnDisCam.Size = new System.Drawing.Size(75, 23);
+            this.BtnDisCam.TabIndex = 2;
+            this.BtnDisCam.Text = "Disconect";
+            this.BtnDisCam.UseVisualStyleBackColor = true;
+            this.BtnDisCam.Click += new System.EventHandler(this.BtnDisCam_Click);
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(17, 124);
-            label7.Name = "label7";
-            label7.Size = new Size(14, 15);
-            label7.TabIndex = 0;
-            label7.Text = "X";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(17, 124);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(14, 15);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "X";
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(39, 103);
-            label8.Name = "label8";
-            label8.Size = new Size(93, 15);
-            label8.TabIndex = 0;
-            label8.Text = "Current Position";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(39, 103);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(93, 15);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Current Position";
             // 
             // TxtX
             // 
-            TxtX.Location = new Point(39, 121);
-            TxtX.Multiline = true;
-            TxtX.Name = "TxtX";
-            TxtX.Size = new Size(93, 23);
-            TxtX.TabIndex = 1;
+            this.TxtX.Location = new System.Drawing.Point(39, 121);
+            this.TxtX.Multiline = true;
+            this.TxtX.Name = "TxtX";
+            this.TxtX.Size = new System.Drawing.Size(93, 23);
+            this.TxtX.TabIndex = 1;
             // 
             // label9
             // 
-            label9.AutoSize = true;
-            label9.Location = new Point(17, 153);
-            label9.Name = "label9";
-            label9.Size = new Size(14, 15);
-            label9.TabIndex = 0;
-            label9.Text = "Y";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(17, 153);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(14, 15);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Y";
             // 
             // TxtY
             // 
-            TxtY.Location = new Point(37, 150);
-            TxtY.Multiline = true;
-            TxtY.Name = "TxtY";
-            TxtY.Size = new Size(93, 23);
-            TxtY.TabIndex = 1;
+            this.TxtY.Location = new System.Drawing.Point(37, 150);
+            this.TxtY.Multiline = true;
+            this.TxtY.Name = "TxtY";
+            this.TxtY.Size = new System.Drawing.Size(93, 23);
+            this.TxtY.TabIndex = 1;
             // 
             // label10
             // 
-            label10.AutoSize = true;
-            label10.Location = new Point(17, 182);
-            label10.Name = "label10";
-            label10.Size = new Size(14, 15);
-            label10.TabIndex = 0;
-            label10.Text = "Z";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(17, 182);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(14, 15);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Z";
             // 
             // TxtZ
             // 
-            TxtZ.Location = new Point(37, 179);
-            TxtZ.Multiline = true;
-            TxtZ.Name = "TxtZ";
-            TxtZ.Size = new Size(93, 23);
-            TxtZ.TabIndex = 1;
+            this.TxtZ.Location = new System.Drawing.Point(37, 179);
+            this.TxtZ.Multiline = true;
+            this.TxtZ.Name = "TxtZ";
+            this.TxtZ.Size = new System.Drawing.Size(93, 23);
+            this.TxtZ.TabIndex = 1;
             // 
             // label11
             // 
-            label11.AutoSize = true;
-            label11.Location = new Point(17, 269);
-            label11.Name = "label11";
-            label11.Size = new Size(20, 15);
-            label11.TabIndex = 0;
-            label11.Text = "Rx";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(17, 269);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(20, 15);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Rx";
             // 
             // TxtRx
             // 
-            TxtRx.Location = new Point(37, 266);
-            TxtRx.Multiline = true;
-            TxtRx.Name = "TxtRx";
-            TxtRx.Size = new Size(93, 23);
-            TxtRx.TabIndex = 1;
+            this.TxtRx.Location = new System.Drawing.Point(37, 266);
+            this.TxtRx.Multiline = true;
+            this.TxtRx.Name = "TxtRx";
+            this.TxtRx.Size = new System.Drawing.Size(93, 23);
+            this.TxtRx.TabIndex = 1;
             // 
             // label12
             // 
-            label12.AutoSize = true;
-            label12.Location = new Point(17, 240);
-            label12.Name = "label12";
-            label12.Size = new Size(20, 15);
-            label12.TabIndex = 0;
-            label12.Text = "Ry";
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(17, 240);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(20, 15);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Ry";
             // 
             // TxtRy
             // 
-            TxtRy.Location = new Point(37, 237);
-            TxtRy.Multiline = true;
-            TxtRy.Name = "TxtRy";
-            TxtRy.Size = new Size(93, 23);
-            TxtRy.TabIndex = 1;
+            this.TxtRy.Location = new System.Drawing.Point(37, 237);
+            this.TxtRy.Multiline = true;
+            this.TxtRy.Name = "TxtRy";
+            this.TxtRy.Size = new System.Drawing.Size(93, 23);
+            this.TxtRy.TabIndex = 1;
             // 
             // label13
             // 
-            label13.AutoSize = true;
-            label13.Location = new Point(17, 211);
-            label13.Name = "label13";
-            label13.Size = new Size(19, 15);
-            label13.TabIndex = 0;
-            label13.Text = "Rz";
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(17, 211);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(19, 15);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Rz";
             // 
             // TxtRz
             // 
-            TxtRz.Location = new Point(37, 208);
-            TxtRz.Multiline = true;
-            TxtRz.Name = "TxtRz";
-            TxtRz.Size = new Size(93, 23);
-            TxtRz.TabIndex = 1;
+            this.TxtRz.Location = new System.Drawing.Point(37, 208);
+            this.TxtRz.Multiline = true;
+            this.TxtRz.Name = "TxtRz";
+            this.TxtRz.Size = new System.Drawing.Size(93, 23);
+            this.TxtRz.TabIndex = 1;
             // 
             // BtnAutoCal
             // 
-            BtnAutoCal.Location = new Point(137, 295);
-            BtnAutoCal.Name = "BtnAutoCal";
-            BtnAutoCal.Size = new Size(144, 23);
-            BtnAutoCal.TabIndex = 2;
-            BtnAutoCal.Text = "Auto calibration";
-            BtnAutoCal.UseVisualStyleBackColor = true;
-            BtnAutoCal.Click += BtnAutoCal_Click;
+            this.BtnAutoCal.Location = new System.Drawing.Point(137, 295);
+            this.BtnAutoCal.Name = "BtnAutoCal";
+            this.BtnAutoCal.Size = new System.Drawing.Size(144, 23);
+            this.BtnAutoCal.TabIndex = 2;
+            this.BtnAutoCal.Text = "Auto calibration";
+            this.BtnAutoCal.UseVisualStyleBackColor = true;
+            this.BtnAutoCal.Click += new System.EventHandler(this.BtnAutoCal_Click);
             // 
             // BtnGetCurPos
             // 
-            BtnGetCurPos.Location = new Point(137, 265);
-            BtnGetCurPos.Name = "BtnGetCurPos";
-            BtnGetCurPos.Size = new Size(144, 23);
-            BtnGetCurPos.TabIndex = 2;
-            BtnGetCurPos.Text = "Get CurPos";
-            BtnGetCurPos.UseVisualStyleBackColor = true;
-            BtnGetCurPos.Click += BtnGetCurPos_Click;
+            this.BtnGetCurPos.Location = new System.Drawing.Point(137, 265);
+            this.BtnGetCurPos.Name = "BtnGetCurPos";
+            this.BtnGetCurPos.Size = new System.Drawing.Size(144, 23);
+            this.BtnGetCurPos.TabIndex = 2;
+            this.BtnGetCurPos.Text = "Get CurPos";
+            this.BtnGetCurPos.UseVisualStyleBackColor = true;
+            this.BtnGetCurPos.Click += new System.EventHandler(this.BtnGetCurPos_Click);
             // 
             // BtnMovePos
             // 
-            BtnMovePos.Location = new Point(137, 237);
-            BtnMovePos.Name = "BtnMovePos";
-            BtnMovePos.Size = new Size(144, 23);
-            BtnMovePos.TabIndex = 2;
-            BtnMovePos.Text = "Move Pos";
-            BtnMovePos.UseVisualStyleBackColor = true;
-            BtnMovePos.Click += BtnMovePos_Click;
+            this.BtnMovePos.Location = new System.Drawing.Point(137, 237);
+            this.BtnMovePos.Name = "BtnMovePos";
+            this.BtnMovePos.Size = new System.Drawing.Size(144, 23);
+            this.BtnMovePos.TabIndex = 2;
+            this.BtnMovePos.Text = "Move Pos";
+            this.BtnMovePos.UseVisualStyleBackColor = true;
+            this.BtnMovePos.Click += new System.EventHandler(this.BtnMovePos_Click);
             // 
             // label15
             // 
-            label15.AutoSize = true;
-            label15.Location = new Point(406, 489);
-            label15.Name = "label15";
-            label15.Size = new Size(80, 15);
-            label15.TabIndex = 0;
-            label15.Text = " AS200 Recipe";
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(406, 489);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(80, 15);
+            this.label15.TabIndex = 0;
+            this.label15.Text = " AS200 Recipe";
             // 
             // label16
             // 
-            label16.AutoSize = true;
-            label16.Location = new Point(348, 515);
-            label16.Name = "label16";
-            label16.Size = new Size(35, 15);
-            label16.TabIndex = 0;
-            label16.Text = "PORT";
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(348, 515);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(35, 15);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "PORT";
             // 
             // TxtPortCamR
             // 
-            TxtPortCamR.Location = new Point(389, 514);
-            TxtPortCamR.Multiline = true;
-            TxtPortCamR.Name = "TxtPortCamR";
-            TxtPortCamR.Size = new Size(110, 23);
-            TxtPortCamR.TabIndex = 1;
-            TxtPortCamR.Text = "23";
+            this.TxtPortCamR.Location = new System.Drawing.Point(389, 514);
+            this.TxtPortCamR.Multiline = true;
+            this.TxtPortCamR.Name = "TxtPortCamR";
+            this.TxtPortCamR.Size = new System.Drawing.Size(110, 23);
+            this.TxtPortCamR.TabIndex = 1;
+            this.TxtPortCamR.Text = "23";
             // 
             // BtnConCamR
             // 
-            BtnConCamR.Location = new Point(505, 515);
-            BtnConCamR.Name = "BtnConCamR";
-            BtnConCamR.Size = new Size(86, 23);
-            BtnConCamR.TabIndex = 2;
-            BtnConCamR.Text = "Connect";
-            BtnConCamR.UseVisualStyleBackColor = true;
-            BtnConCamR.Click += BtnConCamR_Click;
+            this.BtnConCamR.Location = new System.Drawing.Point(505, 515);
+            this.BtnConCamR.Name = "BtnConCamR";
+            this.BtnConCamR.Size = new System.Drawing.Size(86, 23);
+            this.BtnConCamR.TabIndex = 2;
+            this.BtnConCamR.Text = "Connect";
+            this.BtnConCamR.UseVisualStyleBackColor = true;
+            this.BtnConCamR.Click += new System.EventHandler(this.BtnConCamR_Click);
             // 
             // label17
             // 
-            label17.AutoSize = true;
-            label17.Location = new Point(451, 104);
-            label17.Name = "label17";
-            label17.Size = new Size(99, 15);
-            label17.TabIndex = 0;
-            label17.Text = "Command AS200";
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(451, 104);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(99, 15);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Command AS200";
             // 
             // TxtCommand
             // 
-            TxtCommand.Location = new Point(348, 122);
-            TxtCommand.Multiline = true;
-            TxtCommand.Name = "TxtCommand";
-            TxtCommand.Size = new Size(264, 23);
-            TxtCommand.TabIndex = 1;
+            this.TxtCommand.Location = new System.Drawing.Point(348, 122);
+            this.TxtCommand.Multiline = true;
+            this.TxtCommand.Name = "TxtCommand";
+            this.TxtCommand.Size = new System.Drawing.Size(264, 23);
+            this.TxtCommand.TabIndex = 1;
             // 
             // BtnSentCam
             // 
-            BtnSentCam.Location = new Point(618, 122);
-            BtnSentCam.Name = "BtnSentCam";
-            BtnSentCam.Size = new Size(75, 23);
-            BtnSentCam.TabIndex = 2;
-            BtnSentCam.Text = "Send";
-            BtnSentCam.UseVisualStyleBackColor = true;
-            BtnSentCam.Click += BtnSentCam_Click;
+            this.BtnSentCam.Location = new System.Drawing.Point(618, 122);
+            this.BtnSentCam.Name = "BtnSentCam";
+            this.BtnSentCam.Size = new System.Drawing.Size(75, 23);
+            this.BtnSentCam.TabIndex = 2;
+            this.BtnSentCam.Text = "Send";
+            this.BtnSentCam.UseVisualStyleBackColor = true;
+            this.BtnSentCam.Click += new System.EventHandler(this.BtnSentCam_Click);
             // 
             // TxtCommandR
             // 
-            TxtCommandR.Location = new Point(348, 544);
-            TxtCommandR.Multiline = true;
-            TxtCommandR.Name = "TxtCommandR";
-            TxtCommandR.Size = new Size(264, 23);
-            TxtCommandR.TabIndex = 1;
+            this.TxtCommandR.Location = new System.Drawing.Point(348, 544);
+            this.TxtCommandR.Multiline = true;
+            this.TxtCommandR.Name = "TxtCommandR";
+            this.TxtCommandR.Size = new System.Drawing.Size(264, 23);
+            this.TxtCommandR.TabIndex = 1;
             // 
             // BtnSendR
             // 
-            BtnSendR.Location = new Point(618, 544);
-            BtnSendR.Name = "BtnSendR";
-            BtnSendR.Size = new Size(75, 23);
-            BtnSendR.TabIndex = 2;
-            BtnSendR.Text = "Send";
-            BtnSendR.UseVisualStyleBackColor = true;
-            BtnSendR.Click += BtnSendR_Click;
+            this.BtnSendR.Location = new System.Drawing.Point(618, 544);
+            this.BtnSendR.Name = "BtnSendR";
+            this.BtnSendR.Size = new System.Drawing.Size(75, 23);
+            this.BtnSendR.TabIndex = 2;
+            this.BtnSendR.Text = "Send";
+            this.BtnSendR.UseVisualStyleBackColor = true;
+            this.BtnSendR.Click += new System.EventHandler(this.BtnSendR_Click);
             // 
             // label18
             // 
-            label18.AutoSize = true;
-            label18.Location = new Point(18, 298);
-            label18.Name = "label18";
-            label18.Size = new Size(13, 15);
-            label18.TabIndex = 0;
-            label18.Text = "F";
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(18, 298);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(13, 15);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "F";
             // 
             // TxtF
             // 
-            TxtF.Location = new Point(36, 295);
-            TxtF.Multiline = true;
-            TxtF.Name = "TxtF";
-            TxtF.Size = new Size(93, 23);
-            TxtF.TabIndex = 1;
+            this.TxtF.Location = new System.Drawing.Point(36, 295);
+            this.TxtF.Multiline = true;
+            this.TxtF.Name = "TxtF";
+            this.TxtF.Size = new System.Drawing.Size(93, 23);
+            this.TxtF.TabIndex = 1;
             // 
             // BtnDisCamR
             // 
-            BtnDisCamR.Location = new Point(597, 514);
-            BtnDisCamR.Name = "BtnDisCamR";
-            BtnDisCamR.Size = new Size(96, 23);
-            BtnDisCamR.TabIndex = 2;
-            BtnDisCamR.Text = "Disconect";
-            BtnDisCamR.UseVisualStyleBackColor = true;
-            BtnDisCamR.Click += BtnDisCamR_Click;
+            this.BtnDisCamR.Location = new System.Drawing.Point(597, 514);
+            this.BtnDisCamR.Name = "BtnDisCamR";
+            this.BtnDisCamR.Size = new System.Drawing.Size(96, 23);
+            this.BtnDisCamR.TabIndex = 2;
+            this.BtnDisCamR.Text = "Disconect";
+            this.BtnDisCamR.UseVisualStyleBackColor = true;
+            this.BtnDisCamR.Click += new System.EventHandler(this.BtnDisCamR_Click);
             // 
             // Setting
             // 
-            Setting.Controls.Add(tabPage1);
-            Setting.Controls.Add(tabPage2);
-            Setting.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            Setting.Location = new Point(2, 1);
-            Setting.Name = "Setting";
-            Setting.SelectedIndex = 0;
-            Setting.Size = new Size(721, 615);
-            Setting.TabIndex = 3;
+            this.Setting.Controls.Add(this.tabPage1);
+            this.Setting.Controls.Add(this.tabPage2);
+            this.Setting.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Setting.Location = new System.Drawing.Point(2, 1);
+            this.Setting.Name = "Setting";
+            this.Setting.SelectedIndex = 0;
+            this.Setting.Size = new System.Drawing.Size(721, 615);
+            this.Setting.TabIndex = 3;
             // 
             // tabPage1
             // 
-            tabPage1.Controls.Add(TxtData);
-            tabPage1.Controls.Add(DownRz);
-            tabPage1.Controls.Add(DownZ);
-            tabPage1.Controls.Add(DownY);
-            tabPage1.Controls.Add(DownX);
-            tabPage1.Controls.Add(button2);
-            tabPage1.Controls.Add(UpRz);
-            tabPage1.Controls.Add(UpZ);
-            tabPage1.Controls.Add(UpY);
-            tabPage1.Controls.Add(UpX);
-            tabPage1.Controls.Add(button1);
-            tabPage1.Controls.Add(BtnDisRobot);
-            tabPage1.Controls.Add(BtnClear);
-            tabPage1.Controls.Add(BtnMovePos);
-            tabPage1.Controls.Add(label15);
-            tabPage1.Controls.Add(BtnAutoCal);
-            tabPage1.Controls.Add(BtnSendR);
-            tabPage1.Controls.Add(BtnGetCurPos);
-            tabPage1.Controls.Add(label4);
-            tabPage1.Controls.Add(BtnMovePosTrigger);
-            tabPage1.Controls.Add(BtnMovePick);
-            tabPage1.Controls.Add(BtnTriggerPick);
-            tabPage1.Controls.Add(BtnTrainTrigger);
-            tabPage1.Controls.Add(BtnTraningPick);
-            tabPage1.Controls.Add(BtnConRobot);
-            tabPage1.Controls.Add(BtnSentCam);
-            tabPage1.Controls.Add(TxtPortRobot);
-            tabPage1.Controls.Add(label16);
-            tabPage1.Controls.Add(TxtF);
-            tabPage1.Controls.Add(BtnDisCamR);
-            tabPage1.Controls.Add(TxtRz);
-            tabPage1.Controls.Add(label5);
-            tabPage1.Controls.Add(TxtRy);
-            tabPage1.Controls.Add(BtnDisCam);
-            tabPage1.Controls.Add(TxtRx);
-            tabPage1.Controls.Add(label6);
-            tabPage1.Controls.Add(TxtZ);
-            tabPage1.Controls.Add(TxtY);
-            tabPage1.Controls.Add(TxtIpCam);
-            tabPage1.Controls.Add(label18);
-            tabPage1.Controls.Add(TextPartRuntime);
-            tabPage1.Controls.Add(BtnConCam);
-            tabPage1.Controls.Add(TxtPart);
-            tabPage1.Controls.Add(StepRz);
-            tabPage1.Controls.Add(StepZ);
-            tabPage1.Controls.Add(StepY);
-            tabPage1.Controls.Add(StepX);
-            tabPage1.Controls.Add(TxtX);
-            tabPage1.Controls.Add(label17);
-            tabPage1.Controls.Add(label13);
-            tabPage1.Controls.Add(TxtPortCamR);
-            tabPage1.Controls.Add(TxtIpRobot);
-            tabPage1.Controls.Add(TxtPortCam);
-            tabPage1.Controls.Add(label12);
-            tabPage1.Controls.Add(TxtCommand);
-            tabPage1.Controls.Add(label11);
-            tabPage1.Controls.Add(BtnConCamR);
-            tabPage1.Controls.Add(label2);
-            tabPage1.Controls.Add(TxtCommandR);
-            tabPage1.Controls.Add(label23);
-            tabPage1.Controls.Add(label10);
-            tabPage1.Controls.Add(label20);
-            tabPage1.Controls.Add(label1);
-            tabPage1.Controls.Add(label19);
-            tabPage1.Controls.Add(label8);
-            tabPage1.Controls.Add(label22);
-            tabPage1.Controls.Add(label14);
-            tabPage1.Controls.Add(label21);
-            tabPage1.Controls.Add(label3);
-            tabPage1.Controls.Add(label9);
-            tabPage1.Controls.Add(label7);
-            tabPage1.Location = new Point(4, 24);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(713, 587);
-            tabPage1.TabIndex = 0;
-            tabPage1.Text = "Setting";
-            tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Controls.Add(this.TxtData);
+            this.tabPage1.Controls.Add(this.DownRz);
+            this.tabPage1.Controls.Add(this.DownZ);
+            this.tabPage1.Controls.Add(this.DownY);
+            this.tabPage1.Controls.Add(this.DownX);
+            this.tabPage1.Controls.Add(this.button2);
+            this.tabPage1.Controls.Add(this.UpRz);
+            this.tabPage1.Controls.Add(this.UpZ);
+            this.tabPage1.Controls.Add(this.UpY);
+            this.tabPage1.Controls.Add(this.UpX);
+            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.BtnDisRobot);
+            this.tabPage1.Controls.Add(this.BtnClear);
+            this.tabPage1.Controls.Add(this.BtnMovePos);
+            this.tabPage1.Controls.Add(this.label15);
+            this.tabPage1.Controls.Add(this.BtnAutoCal);
+            this.tabPage1.Controls.Add(this.BtnSendR);
+            this.tabPage1.Controls.Add(this.BtnGetCurPos);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.BtnMovePosTrigger);
+            this.tabPage1.Controls.Add(this.BtnMovePick);
+            this.tabPage1.Controls.Add(this.BtnTriggerPick);
+            this.tabPage1.Controls.Add(this.BtnTrainTrigger);
+            this.tabPage1.Controls.Add(this.BtnTraningPick);
+            this.tabPage1.Controls.Add(this.BtnConRobot);
+            this.tabPage1.Controls.Add(this.BtnSentCam);
+            this.tabPage1.Controls.Add(this.TxtPortRobot);
+            this.tabPage1.Controls.Add(this.label16);
+            this.tabPage1.Controls.Add(this.TxtF);
+            this.tabPage1.Controls.Add(this.BtnDisCamR);
+            this.tabPage1.Controls.Add(this.TxtRz);
+            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.TxtRy);
+            this.tabPage1.Controls.Add(this.BtnDisCam);
+            this.tabPage1.Controls.Add(this.TxtRx);
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.TxtZ);
+            this.tabPage1.Controls.Add(this.TxtY);
+            this.tabPage1.Controls.Add(this.TxtIpCam);
+            this.tabPage1.Controls.Add(this.label18);
+            this.tabPage1.Controls.Add(this.TextPartRuntime);
+            this.tabPage1.Controls.Add(this.BtnConCam);
+            this.tabPage1.Controls.Add(this.TxtPart);
+            this.tabPage1.Controls.Add(this.StepRz);
+            this.tabPage1.Controls.Add(this.StepZ);
+            this.tabPage1.Controls.Add(this.StepY);
+            this.tabPage1.Controls.Add(this.StepX);
+            this.tabPage1.Controls.Add(this.TxtX);
+            this.tabPage1.Controls.Add(this.label17);
+            this.tabPage1.Controls.Add(this.label13);
+            this.tabPage1.Controls.Add(this.TxtPortCamR);
+            this.tabPage1.Controls.Add(this.TxtIpRobot);
+            this.tabPage1.Controls.Add(this.TxtPortCam);
+            this.tabPage1.Controls.Add(this.label12);
+            this.tabPage1.Controls.Add(this.TxtCommand);
+            this.tabPage1.Controls.Add(this.label11);
+            this.tabPage1.Controls.Add(this.BtnConCamR);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.TxtCommandR);
+            this.tabPage1.Controls.Add(this.label23);
+            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.label20);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.label19);
+            this.tabPage1.Controls.Add(this.label8);
+            this.tabPage1.Controls.Add(this.label22);
+            this.tabPage1.Controls.Add(this.label14);
+            this.tabPage1.Controls.Add(this.label21);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.label9);
+            this.tabPage1.Controls.Add(this.label7);
+            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(713, 587);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Setting";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // DownRz
             // 
-            DownRz.Location = new Point(247, 209);
-            DownRz.Name = "DownRz";
-            DownRz.Size = new Size(33, 23);
-            DownRz.TabIndex = 2;
-            DownRz.Text = "-";
-            DownRz.UseVisualStyleBackColor = true;
-            DownRz.Click += BtnDisRobot_Click;
+            this.DownRz.Location = new System.Drawing.Point(247, 209);
+            this.DownRz.Name = "DownRz";
+            this.DownRz.Size = new System.Drawing.Size(33, 23);
+            this.DownRz.TabIndex = 2;
+            this.DownRz.Text = "-";
+            this.DownRz.UseVisualStyleBackColor = true;
+            this.DownRz.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DownRZ_MouseDown);
             // 
             // DownZ
             // 
-            DownZ.Location = new Point(247, 179);
-            DownZ.Name = "DownZ";
-            DownZ.Size = new Size(33, 23);
-            DownZ.TabIndex = 2;
-            DownZ.Text = "-";
-            DownZ.UseVisualStyleBackColor = true;
-            DownZ.Click += BtnDisRobot_Click;
+            this.DownZ.Location = new System.Drawing.Point(247, 179);
+            this.DownZ.Name = "DownZ";
+            this.DownZ.Size = new System.Drawing.Size(33, 23);
+            this.DownZ.TabIndex = 2;
+            this.DownZ.Text = "-";
+            this.DownZ.UseVisualStyleBackColor = true;
+            this.DownZ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DownZ_MouseDown);
             // 
             // DownY
             // 
-            DownY.Location = new Point(247, 150);
-            DownY.Name = "DownY";
-            DownY.Size = new Size(33, 23);
-            DownY.TabIndex = 2;
-            DownY.Text = "-";
-            DownY.UseVisualStyleBackColor = true;
-            DownY.Click += BtnDisRobot_Click;
+            this.DownY.Location = new System.Drawing.Point(247, 150);
+            this.DownY.Name = "DownY";
+            this.DownY.Size = new System.Drawing.Size(33, 23);
+            this.DownY.TabIndex = 2;
+            this.DownY.Text = "-";
+            this.DownY.UseVisualStyleBackColor = true;
+            this.DownY.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DownY_MouseDown);
             // 
             // DownX
             // 
-            DownX.Location = new Point(247, 121);
-            DownX.Name = "DownX";
-            DownX.Size = new Size(33, 23);
-            DownX.TabIndex = 2;
-            DownX.Text = "-";
-            DownX.UseVisualStyleBackColor = true;
-            DownX.Click += BtnDisRobot_Click;
+            this.DownX.Location = new System.Drawing.Point(247, 121);
+            this.DownX.Name = "DownX";
+            this.DownX.Size = new System.Drawing.Size(33, 23);
+            this.DownX.TabIndex = 2;
+            this.DownX.Text = "-";
+            this.DownX.UseVisualStyleBackColor = true;
+            this.DownX.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DownX_MouseDown);
             // 
             // button2
             // 
-            button2.Location = new Point(247, 121);
-            button2.Name = "button2";
-            button2.Size = new Size(33, 23);
-            button2.TabIndex = 2;
-            button2.Text = "-";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += BtnDisRobot_Click;
+            this.button2.Location = new System.Drawing.Point(247, 121);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(33, 23);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "-";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // UpRz
             // 
-            UpRz.Location = new Point(209, 209);
-            UpRz.Name = "UpRz";
-            UpRz.Size = new Size(33, 23);
-            UpRz.TabIndex = 2;
-            UpRz.Text = "+";
-            UpRz.UseVisualStyleBackColor = true;
-            UpRz.Click += BtnDisRobot_Click;
+            this.UpRz.Location = new System.Drawing.Point(209, 209);
+            this.UpRz.Name = "UpRz";
+            this.UpRz.Size = new System.Drawing.Size(33, 23);
+            this.UpRz.TabIndex = 2;
+            this.UpRz.Text = "+";
+            this.UpRz.UseVisualStyleBackColor = true;
+            this.UpRz.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UpRZ_MouseDown);
             // 
             // UpZ
             // 
-            UpZ.Location = new Point(208, 179);
-            UpZ.Name = "UpZ";
-            UpZ.Size = new Size(33, 23);
-            UpZ.TabIndex = 2;
-            UpZ.Text = "+";
-            UpZ.UseVisualStyleBackColor = true;
-            UpZ.Click += BtnDisRobot_Click;
+            this.UpZ.Location = new System.Drawing.Point(208, 179);
+            this.UpZ.Name = "UpZ";
+            this.UpZ.Size = new System.Drawing.Size(33, 23);
+            this.UpZ.TabIndex = 2;
+            this.UpZ.Text = "+";
+            this.UpZ.UseVisualStyleBackColor = true;
+            this.UpZ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UpZ_MouseDown);
             // 
             // UpY
             // 
-            UpY.Location = new Point(208, 150);
-            UpY.Name = "UpY";
-            UpY.Size = new Size(33, 23);
-            UpY.TabIndex = 2;
-            UpY.Text = "+";
-            UpY.UseVisualStyleBackColor = true;
-            UpY.Click += BtnDisRobot_Click;
+            this.UpY.Location = new System.Drawing.Point(208, 150);
+            this.UpY.Name = "UpY";
+            this.UpY.Size = new System.Drawing.Size(33, 23);
+            this.UpY.TabIndex = 2;
+            this.UpY.Text = "+";
+            this.UpY.UseVisualStyleBackColor = true;
+            this.UpY.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UpY_MouseDown);
             // 
             // UpX
             // 
-            UpX.Location = new Point(208, 121);
-            UpX.Name = "UpX";
-            UpX.Size = new Size(33, 23);
-            UpX.TabIndex = 2;
-            UpX.Text = "+";
-            UpX.UseVisualStyleBackColor = true;
-            UpX.MouseDown += UpX_MouseDown;
+            this.UpX.Location = new System.Drawing.Point(208, 121);
+            this.UpX.Name = "UpX";
+            this.UpX.Size = new System.Drawing.Size(33, 23);
+            this.UpX.TabIndex = 2;
+            this.UpX.Text = "+";
+            this.UpX.UseVisualStyleBackColor = true;
+            this.UpX.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UpX_MouseDown);
             // 
             // button1
             // 
-            button1.Location = new Point(208, 121);
-            button1.Name = "button1";
-            button1.Size = new Size(33, 23);
-            button1.TabIndex = 2;
-            button1.Text = "+";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += BtnDisRobot_Click;
+            this.button1.Location = new System.Drawing.Point(208, 121);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(33, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "+";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // BtnMovePosTrigger
             // 
-            BtnMovePosTrigger.Location = new Point(86, 494);
-            BtnMovePosTrigger.Name = "BtnMovePosTrigger";
-            BtnMovePosTrigger.Size = new Size(68, 56);
-            BtnMovePosTrigger.TabIndex = 2;
-            BtnMovePosTrigger.Text = "Move Pos trigger";
-            BtnMovePosTrigger.UseVisualStyleBackColor = true;
-            BtnMovePosTrigger.Click += BtnPosTrigger_Click;
+            this.BtnMovePosTrigger.Location = new System.Drawing.Point(86, 494);
+            this.BtnMovePosTrigger.Name = "BtnMovePosTrigger";
+            this.BtnMovePosTrigger.Size = new System.Drawing.Size(68, 56);
+            this.BtnMovePosTrigger.TabIndex = 2;
+            this.BtnMovePosTrigger.Text = "Move Pos trigger";
+            this.BtnMovePosTrigger.UseVisualStyleBackColor = true;
+            this.BtnMovePosTrigger.Click += new System.EventHandler(this.BtnPosTrigger_Click);
             // 
             // BtnMovePick
             // 
-            BtnMovePick.Location = new Point(248, 494);
-            BtnMovePick.Name = "BtnMovePick";
-            BtnMovePick.Size = new Size(79, 55);
-            BtnMovePick.TabIndex = 2;
-            BtnMovePick.Text = "Move to Pick Place";
-            BtnMovePick.UseVisualStyleBackColor = true;
-            BtnMovePick.Click += BtnMovePick_Click;
+            this.BtnMovePick.Location = new System.Drawing.Point(248, 494);
+            this.BtnMovePick.Name = "BtnMovePick";
+            this.BtnMovePick.Size = new System.Drawing.Size(79, 55);
+            this.BtnMovePick.TabIndex = 2;
+            this.BtnMovePick.Text = "Move to Pick Place";
+            this.BtnMovePick.UseVisualStyleBackColor = true;
+            this.BtnMovePick.Click += new System.EventHandler(this.BtnMovePick_Click);
             // 
             // BtnTriggerPick
             // 
-            BtnTriggerPick.Location = new Point(163, 494);
-            BtnTriggerPick.Name = "BtnTriggerPick";
-            BtnTriggerPick.Size = new Size(79, 55);
-            BtnTriggerPick.TabIndex = 2;
-            BtnTriggerPick.Text = "Trigger";
-            BtnTriggerPick.UseVisualStyleBackColor = true;
-            BtnTriggerPick.Click += BtnTriggerPick_Click;
+            this.BtnTriggerPick.Location = new System.Drawing.Point(163, 494);
+            this.BtnTriggerPick.Name = "BtnTriggerPick";
+            this.BtnTriggerPick.Size = new System.Drawing.Size(79, 55);
+            this.BtnTriggerPick.TabIndex = 2;
+            this.BtnTriggerPick.Text = "Trigger";
+            this.BtnTriggerPick.UseVisualStyleBackColor = true;
+            this.BtnTriggerPick.Click += new System.EventHandler(this.BtnTriggerPick_Click);
             // 
             // BtnTrainTrigger
             // 
-            BtnTrainTrigger.Location = new Point(86, 391);
-            BtnTrainTrigger.Name = "BtnTrainTrigger";
-            BtnTrainTrigger.Size = new Size(68, 56);
-            BtnTrainTrigger.TabIndex = 2;
-            BtnTrainTrigger.Text = "Trigger Pos";
-            BtnTrainTrigger.UseVisualStyleBackColor = true;
-            BtnTrainTrigger.Click += BtnTrainTrigger_Click;
+            this.BtnTrainTrigger.Location = new System.Drawing.Point(86, 391);
+            this.BtnTrainTrigger.Name = "BtnTrainTrigger";
+            this.BtnTrainTrigger.Size = new System.Drawing.Size(68, 56);
+            this.BtnTrainTrigger.TabIndex = 2;
+            this.BtnTrainTrigger.Text = "Trigger Pos";
+            this.BtnTrainTrigger.UseVisualStyleBackColor = true;
+            this.BtnTrainTrigger.Click += new System.EventHandler(this.BtnTrainTrigger_Click);
             // 
             // BtnTraningPick
             // 
-            BtnTraningPick.Location = new Point(163, 392);
-            BtnTraningPick.Name = "BtnTraningPick";
-            BtnTraningPick.Size = new Size(79, 55);
-            BtnTraningPick.TabIndex = 2;
-            BtnTraningPick.Text = "Pick Place Pos";
-            BtnTraningPick.UseVisualStyleBackColor = true;
-            BtnTraningPick.Click += BtnTraningPick_Click;
+            this.BtnTraningPick.Location = new System.Drawing.Point(163, 392);
+            this.BtnTraningPick.Name = "BtnTraningPick";
+            this.BtnTraningPick.Size = new System.Drawing.Size(79, 55);
+            this.BtnTraningPick.TabIndex = 2;
+            this.BtnTraningPick.Text = "Pick Place Pos";
+            this.BtnTraningPick.UseVisualStyleBackColor = true;
+            this.BtnTraningPick.Click += new System.EventHandler(this.BtnTraningPick_Click);
             // 
             // TextPartRuntime
             // 
-            TextPartRuntime.Location = new Point(18, 516);
-            TextPartRuntime.Multiline = true;
-            TextPartRuntime.Name = "TextPartRuntime";
-            TextPartRuntime.Size = new Size(50, 23);
-            TextPartRuntime.TabIndex = 1;
-            TextPartRuntime.Text = "1";
-            TextPartRuntime.TextAlign = HorizontalAlignment.Center;
+            this.TextPartRuntime.Location = new System.Drawing.Point(18, 516);
+            this.TextPartRuntime.Multiline = true;
+            this.TextPartRuntime.Name = "TextPartRuntime";
+            this.TextPartRuntime.Size = new System.Drawing.Size(50, 23);
+            this.TextPartRuntime.TabIndex = 1;
+            this.TextPartRuntime.Text = "1";
+            this.TextPartRuntime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtPart
             // 
-            TxtPart.Location = new Point(18, 409);
-            TxtPart.Multiline = true;
-            TxtPart.Name = "TxtPart";
-            TxtPart.Size = new Size(50, 23);
-            TxtPart.TabIndex = 1;
-            TxtPart.Text = "1";
-            TxtPart.TextAlign = HorizontalAlignment.Center;
+            this.TxtPart.Location = new System.Drawing.Point(18, 409);
+            this.TxtPart.Multiline = true;
+            this.TxtPart.Name = "TxtPart";
+            this.TxtPart.Size = new System.Drawing.Size(50, 23);
+            this.TxtPart.TabIndex = 1;
+            this.TxtPart.Text = "1";
+            this.TxtPart.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // StepRz
             // 
-            StepRz.Location = new Point(137, 209);
-            StepRz.Multiline = true;
-            StepRz.Name = "StepRz";
-            StepRz.Size = new Size(65, 23);
-            StepRz.TabIndex = 1;
-            StepRz.Text = "2";
-            StepRz.TextAlign = HorizontalAlignment.Center;
+            this.StepRz.Location = new System.Drawing.Point(137, 209);
+            this.StepRz.Multiline = true;
+            this.StepRz.Name = "StepRz";
+            this.StepRz.Size = new System.Drawing.Size(65, 23);
+            this.StepRz.TabIndex = 1;
+            this.StepRz.Text = "2";
+            this.StepRz.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // StepZ
             // 
-            StepZ.Location = new Point(136, 179);
-            StepZ.Multiline = true;
-            StepZ.Name = "StepZ";
-            StepZ.Size = new Size(65, 23);
-            StepZ.TabIndex = 1;
-            StepZ.Text = "3";
-            StepZ.TextAlign = HorizontalAlignment.Center;
+            this.StepZ.Location = new System.Drawing.Point(136, 179);
+            this.StepZ.Multiline = true;
+            this.StepZ.Name = "StepZ";
+            this.StepZ.Size = new System.Drawing.Size(65, 23);
+            this.StepZ.TabIndex = 1;
+            this.StepZ.Text = "3";
+            this.StepZ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // StepY
             // 
-            StepY.Location = new Point(136, 150);
-            StepY.Multiline = true;
-            StepY.Name = "StepY";
-            StepY.Size = new Size(65, 23);
-            StepY.TabIndex = 1;
-            StepY.Text = "3";
-            StepY.TextAlign = HorizontalAlignment.Center;
+            this.StepY.Location = new System.Drawing.Point(136, 150);
+            this.StepY.Multiline = true;
+            this.StepY.Name = "StepY";
+            this.StepY.Size = new System.Drawing.Size(65, 23);
+            this.StepY.TabIndex = 1;
+            this.StepY.Text = "3";
+            this.StepY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // StepX
             // 
-            StepX.Location = new Point(136, 121);
-            StepX.Multiline = true;
-            StepX.Name = "StepX";
-            StepX.Size = new Size(65, 23);
-            StepX.TabIndex = 1;
-            StepX.Text = "3";
-            StepX.TextAlign = HorizontalAlignment.Center;
+            this.StepX.Location = new System.Drawing.Point(136, 121);
+            this.StepX.Multiline = true;
+            this.StepX.Name = "StepX";
+            this.StepX.Size = new System.Drawing.Size(65, 23);
+            this.StepX.TabIndex = 1;
+            this.StepX.Text = "3";
+            this.StepX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label23
             // 
-            label23.AutoSize = true;
-            label23.Location = new Point(29, 498);
-            label23.Name = "label23";
-            label23.Size = new Size(28, 15);
-            label23.TabIndex = 0;
-            label23.Text = "Part";
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(29, 498);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(28, 15);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Part";
             // 
             // label20
             // 
-            label20.AutoSize = true;
-            label20.Location = new Point(29, 391);
-            label20.Name = "label20";
-            label20.Size = new Size(28, 15);
-            label20.TabIndex = 0;
-            label20.Text = "Part";
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(29, 391);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(28, 15);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Part";
             // 
             // label19
             // 
-            label19.AutoSize = true;
-            label19.Location = new Point(136, 102);
-            label19.Name = "label19";
-            label19.Size = new Size(63, 15);
-            label19.TabIndex = 0;
-            label19.Text = "Step move";
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(136, 102);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(63, 15);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Step move";
             // 
             // label22
             // 
-            label22.AutoSize = true;
-            label22.Location = new Point(17, 476);
-            label22.Name = "label22";
-            label22.Size = new Size(131, 15);
-            label22.TabIndex = 0;
-            label22.Text = "Runtime Pick and Place";
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(17, 476);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(131, 15);
+            this.label22.TabIndex = 0;
+            this.label22.Text = "Runtime Pick and Place";
             // 
             // label14
             // 
-            label14.AutoSize = true;
-            label14.Location = new Point(445, 13);
-            label14.Name = "label14";
-            label14.Size = new Size(83, 15);
-            label14.TabIndex = 0;
-            label14.Text = "Camera AS200";
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(445, 13);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(83, 15);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Camera AS200";
             // 
             // label21
             // 
-            label21.AutoSize = true;
-            label21.Location = new Point(17, 373);
-            label21.Name = "label21";
-            label21.Size = new Size(128, 15);
-            label21.TabIndex = 0;
-            label21.Text = "Training Pick and Place";
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(17, 373);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(128, 15);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "Training Pick and Place";
             // 
             // tabPage2
             // 
-            tabPage2.Location = new Point(4, 24);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(713, 587);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "Traning pick place";
-            tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(713, 587);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Traning pick place";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(722, 616);
-            Controls.Add(Setting);
-            Name = "Form1";
-            Text = "Form1";
-            Setting.ResumeLayout(false);
-            tabPage1.ResumeLayout(false);
-            tabPage1.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(722, 616);
+            this.Controls.Add(this.Setting);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.Setting.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
