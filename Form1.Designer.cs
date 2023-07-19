@@ -87,7 +87,7 @@
             this.BtnMovePosTrigger = new System.Windows.Forms.Button();
             this.BtnMovePick = new System.Windows.Forms.Button();
             this.BtnTriggerPick = new System.Windows.Forms.Button();
-            this.BtnTrainTrigger = new System.Windows.Forms.Button();
+            this.BtnTrainPosTrigger = new System.Windows.Forms.Button();
             this.BtnTraningPick = new System.Windows.Forms.Button();
             this.TextPartRuntime = new System.Windows.Forms.TextBox();
             this.TxtPart = new System.Windows.Forms.TextBox();
@@ -543,7 +543,7 @@
             this.tabPage1.Controls.Add(this.BtnMovePosTrigger);
             this.tabPage1.Controls.Add(this.BtnMovePick);
             this.tabPage1.Controls.Add(this.BtnTriggerPick);
-            this.tabPage1.Controls.Add(this.BtnTrainTrigger);
+            this.tabPage1.Controls.Add(this.BtnTrainPosTrigger);
             this.tabPage1.Controls.Add(this.BtnTraningPick);
             this.tabPage1.Controls.Add(this.BtnConRobot);
             this.tabPage1.Controls.Add(this.BtnSentCam);
@@ -608,7 +608,6 @@
             this.DownRz.TabIndex = 2;
             this.DownRz.Text = "-";
             this.DownRz.UseVisualStyleBackColor = true;
-            this.DownRz.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DownRZ_MouseDown);
             // 
             // DownZ
             // 
@@ -618,7 +617,6 @@
             this.DownZ.TabIndex = 2;
             this.DownZ.Text = "-";
             this.DownZ.UseVisualStyleBackColor = true;
-            this.DownZ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DownZ_MouseDown);
             // 
             // DownY
             // 
@@ -628,7 +626,6 @@
             this.DownY.TabIndex = 2;
             this.DownY.Text = "-";
             this.DownY.UseVisualStyleBackColor = true;
-            this.DownY.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DownY_MouseDown);
             // 
             // DownX
             // 
@@ -657,7 +654,6 @@
             this.UpRz.TabIndex = 2;
             this.UpRz.Text = "+";
             this.UpRz.UseVisualStyleBackColor = true;
-            this.UpRz.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UpRZ_MouseDown);
             // 
             // UpZ
             // 
@@ -667,7 +663,6 @@
             this.UpZ.TabIndex = 2;
             this.UpZ.Text = "+";
             this.UpZ.UseVisualStyleBackColor = true;
-            this.UpZ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UpZ_MouseDown);
             // 
             // UpY
             // 
@@ -677,7 +672,6 @@
             this.UpY.TabIndex = 2;
             this.UpY.Text = "+";
             this.UpY.UseVisualStyleBackColor = true;
-            this.UpY.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UpY_MouseDown);
             // 
             // UpX
             // 
@@ -706,7 +700,7 @@
             this.BtnMovePosTrigger.TabIndex = 2;
             this.BtnMovePosTrigger.Text = "Move Pos trigger";
             this.BtnMovePosTrigger.UseVisualStyleBackColor = true;
-            this.BtnMovePosTrigger.Click += new System.EventHandler(this.BtnPosTrigger_Click);
+            this.BtnMovePosTrigger.Click += new System.EventHandler(this.BtnMovePosTrigger_Click);
             // 
             // BtnMovePick
             // 
@@ -728,15 +722,15 @@
             this.BtnTriggerPick.UseVisualStyleBackColor = true;
             this.BtnTriggerPick.Click += new System.EventHandler(this.BtnTriggerPick_Click);
             // 
-            // BtnTrainTrigger
+            // BtnTrainPosTrigger
             // 
-            this.BtnTrainTrigger.Location = new System.Drawing.Point(86, 391);
-            this.BtnTrainTrigger.Name = "BtnTrainTrigger";
-            this.BtnTrainTrigger.Size = new System.Drawing.Size(68, 56);
-            this.BtnTrainTrigger.TabIndex = 2;
-            this.BtnTrainTrigger.Text = "Trigger Pos";
-            this.BtnTrainTrigger.UseVisualStyleBackColor = true;
-            this.BtnTrainTrigger.Click += new System.EventHandler(this.BtnTrainTrigger_Click);
+            this.BtnTrainPosTrigger.Location = new System.Drawing.Point(86, 391);
+            this.BtnTrainPosTrigger.Name = "BtnTrainPosTrigger";
+            this.BtnTrainPosTrigger.Size = new System.Drawing.Size(68, 56);
+            this.BtnTrainPosTrigger.TabIndex = 2;
+            this.BtnTrainPosTrigger.Text = "Train Trigger Pos";
+            this.BtnTrainPosTrigger.UseVisualStyleBackColor = true;
+            this.BtnTrainPosTrigger.Click += new System.EventHandler(this.BtnTrainPosTrigger_Click);
             // 
             // BtnTraningPick
             // 
@@ -744,7 +738,7 @@
             this.BtnTraningPick.Name = "BtnTraningPick";
             this.BtnTraningPick.Size = new System.Drawing.Size(79, 55);
             this.BtnTraningPick.TabIndex = 2;
-            this.BtnTraningPick.Text = "Pick Place Pos";
+            this.BtnTraningPick.Text = "Train Pick Place Pos";
             this.BtnTraningPick.UseVisualStyleBackColor = true;
             this.BtnTraningPick.Click += new System.EventHandler(this.BtnTraningPick_Click);
             // 
@@ -954,7 +948,7 @@
         private TextBox StepX;
         private Label label19;
         private TextBox TxtPart;
-        private Button BtnTrainTrigger;
+        private Button BtnTrainPosTrigger;
         private Button BtnTraningPick;
         private Label label20;
         private Label label21;
