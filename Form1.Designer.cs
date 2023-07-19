@@ -84,7 +84,7 @@
             UpY = new Button();
             UpX = new Button();
             button1 = new Button();
-            BtnPosTrigger = new Button();
+            BtnMovePosTrigger = new Button();
             BtnMovePick = new Button();
             BtnTriggerPick = new Button();
             BtnTrainTrigger = new Button();
@@ -122,7 +122,8 @@
             TxtIpRobot.Name = "TxtIpRobot";
             TxtIpRobot.Size = new Size(119, 23);
             TxtIpRobot.TabIndex = 1;
-            TxtIpRobot.Text = "10.68.86.57";
+            TxtIpRobot.Text = "172.20.90.110";
+            TxtIpRobot.TextChanged += TxtIpRobot_TextChanged;
             // 
             // BtnConRobot
             // 
@@ -227,7 +228,7 @@
             TxtIpCam.Name = "TxtIpCam";
             TxtIpCam.Size = new Size(134, 23);
             TxtIpCam.TabIndex = 1;
-            TxtIpCam.Text = "10.68.86.57";
+            TxtIpCam.Text = "172.20.90.110";
             // 
             // TxtPortCam
             // 
@@ -518,7 +519,6 @@
             Setting.SelectedIndex = 0;
             Setting.Size = new Size(721, 615);
             Setting.TabIndex = 3;
-            Setting.SelectedIndexChanged += Setting_SelectedIndexChanged;
             // 
             // tabPage1
             // 
@@ -541,7 +541,7 @@
             tabPage1.Controls.Add(BtnSendR);
             tabPage1.Controls.Add(BtnGetCurPos);
             tabPage1.Controls.Add(label4);
-            tabPage1.Controls.Add(BtnPosTrigger);
+            tabPage1.Controls.Add(BtnMovePosTrigger);
             tabPage1.Controls.Add(BtnMovePick);
             tabPage1.Controls.Add(BtnTriggerPick);
             tabPage1.Controls.Add(BtnTrainTrigger);
@@ -701,15 +701,15 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += BtnDisRobot_Click;
             // 
-            // BtnPosTrigger
+            // BtnMovePosTrigger
             // 
-            BtnPosTrigger.Location = new Point(86, 494);
-            BtnPosTrigger.Name = "BtnPosTrigger";
-            BtnPosTrigger.Size = new Size(68, 56);
-            BtnPosTrigger.TabIndex = 2;
-            BtnPosTrigger.Text = "Move Pos trigger";
-            BtnPosTrigger.UseVisualStyleBackColor = true;
-            BtnPosTrigger.Click += BtnConRobot_Click;
+            BtnMovePosTrigger.Location = new Point(86, 494);
+            BtnMovePosTrigger.Name = "BtnMovePosTrigger";
+            BtnMovePosTrigger.Size = new Size(68, 56);
+            BtnMovePosTrigger.TabIndex = 2;
+            BtnMovePosTrigger.Text = "Move Pos trigger";
+            BtnMovePosTrigger.UseVisualStyleBackColor = true;
+            BtnMovePosTrigger.Click += BtnPosTrigger_Click;
             // 
             // BtnMovePick
             // 
@@ -966,5 +966,6 @@
         private Label label23;
         private Label label22;
         private Button BtnMovePick;
+        private Button BtnMovePosTrigger;
     }
 }

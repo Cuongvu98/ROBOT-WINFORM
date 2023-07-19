@@ -108,6 +108,7 @@ namespace ROBOT_WINFORM
 
         private async Task<string> ActivateRobot(string Position, double fig)
         {
+            Console.WriteLine(Position);
             Position = Position.Replace("\r\n", "");
             string[] parts1 = Position.Split(',');
             String _SendPosToRobot1 = "";
@@ -272,7 +273,7 @@ namespace ROBOT_WINFORM
                     }
                     else MessageBox.Show("Calib fail");
                 }
-            }
+            } else MessageBox.Show("Calib fail");
             BtnAutoCal.Enabled = true;
             BtnGetCurPos.Enabled = true;
         }
@@ -332,9 +333,10 @@ namespace ROBOT_WINFORM
             byte[] buffer = new byte[1024];
             string receivedDataRobot = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
             string[] p = receivedDataRobot.Split(' ');
-            await ActivateRobot($"{Convert.ToDouble(p[0]) + Convert.ToDouble(StepX)},{p[1]},{p[2]},{p[3]},{p[4]},{p[5]}", Convert.ToDouble(p[6]));
+            await ActivateRobot($"{Convert.ToDouble(p[0]) + Convert.ToDouble(StepX.Text)},{p[1]},{p[2]},{p[3]},{p[4]},{p[5]}", Convert.ToDouble(p[6]));
             string receivedDataRobot1 = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
             string[] p1 = receivedDataRobot1.Split(' ');
+            Console.WriteLine(p1);
             TxtX.Text = p1[0];
             TxtY.Text = p1[1];
             TxtZ.Text = p1[2];
@@ -504,7 +506,7 @@ namespace ROBOT_WINFORM
 
         private async void BtnTriggerPick_Click(object sender, EventArgs e)
         {
-            if (poss[Convert.ToInt16(TextPartRuntime) - 1, 2] == "1")
+            if (poss[Convert.ToInt16(TextPartRuntime.Text) - 1, 2] == "1")
             {
                 byte[] buffer = new byte[1024];
                 string receivedDataRobot = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
@@ -525,14 +527,14 @@ namespace ROBOT_WINFORM
             }
             else
             {
-                MessageBox.Show("Pos trigger not training");
+                MessageBox.Show("Pos not training");
             }
         }
 
         private async void BtnMovePick_Click(object sender, EventArgs e)
         {
 
-            if (poss[Convert.ToInt16(TextPartRuntime) - 1, 4] == "1")
+            if (poss[Convert.ToInt16(TextPartRuntime.Text) - 1, 4] == "1")
             {
                 byte[] buffer = new byte[1024];
                 await ActivateRobot(poss[Convert.ToInt16(TxtPart.Text) - 1, 5], fig);
@@ -543,7 +545,20 @@ namespace ROBOT_WINFORM
             }
         }
 
-        private void Setting_SelectedIndexChanged(object sender, EventArgs e)
+        private async void BtnPosTrigger_Click(object sender, EventArgs e)
+        {
+            if (poss[Convert.ToInt16(TextPartRuntime.Text) - 1, 0] == "1")
+            {
+                byte[] buffer = new byte[1024];
+                await ActivateRobot(poss[Convert.ToInt16(TxtPart.Text) - 1, 1], fig);
+            }
+            else
+            {
+                MessageBox.Show("Pos trigger not training");
+            }
+        }
+
+        private void TxtIpRobot_TextChanged(object sender, EventArgs e)
         {
 
         }
