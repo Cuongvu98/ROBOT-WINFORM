@@ -636,6 +636,7 @@
             this.DownX.Text = "-";
             this.DownX.UseVisualStyleBackColor = true;
             this.DownX.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DownX_MouseDown);
+            this.DownX.MouseUp += new System.Windows.Forms.MouseEventHandler(this.DownX_MouseUp);
             // 
             // button2
             // 
@@ -682,6 +683,7 @@
             this.UpX.Text = "+";
             this.UpX.UseVisualStyleBackColor = true;
             this.UpX.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UpX_MouseDown);
+            this.UpX.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UpX_MouseUp);
             // 
             // button1
             // 
