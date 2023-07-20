@@ -490,6 +490,7 @@ namespace ROBOT_WINFORM
                 MessageBox.Show($"Training trigger part Pos {TxtPart.Text} successfully");
                 poss[Convert.ToInt16(TxtPart.Text) - 1, 0] = "1";
                 poss[Convert.ToInt16(TxtPart.Text) - 1, 1] = string.Join(",", p);
+                //poss[Convert.ToInt16(TxtPart.Text) - 1, 1] = $"{p[0]},{p[1]},{p[2]},{p[3]},{p[4]},{p[5]},";
             }
             else
             {
@@ -502,9 +503,9 @@ namespace ROBOT_WINFORM
         {
             byte[] buffer = new byte[1024];
             string receivedDataRobot = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
-/*            int LastIndex = receivedDataRobot.LastIndexOf(' ');
-            fig = Convert.ToDouble(receivedDataRobot.Substring(LastIndex + 1));
-            receivedDataRobot = receivedDataRobot.Substring(0, LastIndex);*/
+            /*            int LastIndex = receivedDataRobot.LastIndexOf(' ');
+                        fig = Convert.ToDouble(receivedDataRobot.Substring(LastIndex + 1));
+                        receivedDataRobot = receivedDataRobot.Substring(0, LastIndex);*/
             string[] p = receivedDataRobot.Split(' ');
             fig = Convert.ToDouble(p[6]);
             string receivedDataCamera = await SendReceiveData(CameraClient, $"TTR,{TxtPart.Text},{p[0]},{p[1]},{p[2]},{p[5]},{p[4]},{p[3]}", "Camera", buffer);
@@ -576,6 +577,6 @@ namespace ROBOT_WINFORM
             }
         }
 
-   
+
     }
 }
