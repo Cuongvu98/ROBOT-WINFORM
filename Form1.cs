@@ -320,12 +320,19 @@ namespace ROBOT_WINFORM
             Decreasing = true;
             while (Decreasing)
             {
-                _ = double.TryParse(TxtX.Text, out double x);
                 byte[] buffer = new byte[1024];
-                //x += Convert.ToDouble(StepX.Text);
-                x += 3;
-                await SendReceiveData(RobotClient, $"{x},{TxtY.Text},{TxtZ.Text},{TxtRx.Text},{TxtRy.Text},{TxtRz.Text},{TxtF.Text},", "Robot", buffer);
-                TxtX.Text = x.ToString();
+                string data = await SendReceiveData(RobotClient, $"{Convert.ToDouble(TxtX) + Convert.ToDouble(StepX.Text)},{TxtY.Text},{TxtZ.Text},{TxtRx.Text},{TxtRy.Text},{TxtRz.Text},{TxtF.Text},", "Robot", buffer);
+                string[] p = data.Split(' ');
+                if (p.Length >= 6)
+                {
+                    TxtX.Text = p[0];
+                    TxtY.Text = p[1];
+                    TxtZ.Text = p[2];
+                    TxtRx.Text = p[3];
+                    TxtRy.Text = p[4];
+                    TxtRz.Text = p[5];
+                    TxtF.Text = p[6];
+                }
             }
         }
 
@@ -337,16 +344,22 @@ namespace ROBOT_WINFORM
 
         private async void DownX_MouseDown(object sender, MouseEventArgs e)
         {
-            double i = Convert.ToDouble(StepX.Text);
             Decreasing = true;
             while (Decreasing)
             {
-                _ = double.TryParse(TxtX.Text, out double x);
                 byte[] buffer = new byte[1024];
-                //x -= Convert.ToDouble(StepX.Text);
-                x -= 3;
-                await SendReceiveData(RobotClient, $"{x},{TxtY.Text},{TxtZ.Text},{TxtRx.Text},{TxtRy.Text},{TxtRz.Text},{TxtF.Text},", "Robot", buffer);
-                TxtX.Text = x.ToString();
+                string data = await SendReceiveData(RobotClient, $"{Convert.ToDouble(TxtX) - Convert.ToDouble(StepX.Text)},{TxtY.Text},{TxtZ.Text},{TxtRx.Text},{TxtRy.Text},{TxtRz.Text},{TxtF.Text},", "Robot", buffer);
+                string[] p = data.Split(' ');
+                if (p.Length >= 6)
+                {
+                    TxtX.Text = p[0];
+                    TxtY.Text = p[1];
+                    TxtZ.Text = p[2];
+                    TxtRx.Text = p[3];
+                    TxtRy.Text = p[4];
+                    TxtRz.Text = p[5];
+                    TxtF.Text = p[6];
+                }
             }
         }
 
