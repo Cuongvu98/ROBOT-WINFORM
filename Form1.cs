@@ -60,7 +60,7 @@ namespace ROBOT_WINFORM
         {
             StringBuilder Data1 = new StringBuilder();
             NetworkStream Stream = client.GetStream();
-            Stream.ReadTimeout = 10000;
+            //Stream.ReadTimeout = 10000;
             int bytesReadCam = await Stream.ReadAsync(buffer, 0, buffer.Length);
             if (bytesReadCam > 0)
             {
@@ -87,7 +87,6 @@ namespace ROBOT_WINFORM
             NetworkStream Stream = client.GetStream();
             await Stream.WriteAsync(data1, 0, data1.Length);
             StringBuilder Data1 = new StringBuilder();
-            Stream.ReadTimeout = 10000;
             int bytesReadCam = await Stream.ReadAsync(buffer, 0, buffer.Length);
             if (bytesReadCam > 0)
             {
