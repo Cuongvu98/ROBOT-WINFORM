@@ -60,8 +60,7 @@ namespace ROBOT_WINFORM
         {
             StringBuilder Data1 = new StringBuilder();
             NetworkStream Stream = client.GetStream();
-            //Stream.ReadTimeout = 10000;
-            int bytesReadCam = await Stream.ReadAsync(buffer, 0, buffer.Length);
+            int bytesReadCam = await Stream.ReadAsync(buffer);
             if (bytesReadCam > 0)
             {
                 string receivedData = Encoding.ASCII.GetString(buffer, 0, bytesReadCam);
@@ -87,10 +86,10 @@ namespace ROBOT_WINFORM
             NetworkStream Stream = client.GetStream();
             await Stream.WriteAsync(data1, 0, data1.Length);
             StringBuilder Data1 = new StringBuilder();
-            int bytesReadCam = await Stream.ReadAsync(buffer, 0, buffer.Length);
-            if (bytesReadCam > 0)
+            int bytesRead = await Stream.ReadAsync(buffer, 0, buffer.Length);
+            if (bytesRead > 0)
             {
-                string receivedData = Encoding.ASCII.GetString(buffer, 0, bytesReadCam);
+                string receivedData = Encoding.ASCII.GetString(buffer, 0, bytesRead);
                 Data1.Append(receivedData);
                 TxtData.Invoke((MethodInvoker)(() =>
                 {
@@ -135,13 +134,6 @@ namespace ROBOT_WINFORM
             return _RobotSend;
         }
 
-
-
-
-
-
-
-
         private void BtnConRobot_Click(object sender, EventArgs e)
         {
             ConnectServer(TxtIpRobot.Text, TxtPortRobot.Text, "Robot", ref RobotClient);
@@ -175,8 +167,7 @@ namespace ROBOT_WINFORM
             BtnSentCam.Enabled = false;
             byte[] buffer = new byte[1024];
             string command = TxtCommand.Text.Trim();
-            await SendCommand(CameraClient, command, "Camera");
-            await ReceiveData(CameraClient, "Camera", buffer);
+            await SendReceiveData(CameraClient, command, "Camera", buffer);
             BtnSentCam.Enabled = true;
         }
 
@@ -277,7 +268,7 @@ namespace ROBOT_WINFORM
 
         private async void BtnMovePos_Click(object sender, EventArgs e)
         {
-            BtnMovePos.Enabled = false;
+            //BtnMovePos.Enabled = false;
             if (
             !double.TryParse(TxtX.Text, out double X) ||
             !double.TryParse(TxtY.Text, out double Y) ||
@@ -296,23 +287,23 @@ namespace ROBOT_WINFORM
             {
                 MessageBox.Show("Lỗi robot di chuyển");
             }
-            BtnMovePos.Enabled = true;
+            //BtnMovePos.Enabled = true;
         }
 
         private async void BtnConCamR_Click(object sender, EventArgs e)
         {
+            BtnConCamR.Enabled = false;
             byte[] buffer = new byte[1024];
             ConnectServer(TxtIpRobot.Text, "23", "Camera", ref CameraClientR);
             await ReceiveData(CameraClientR, "CameraR", buffer);
-            BtnConCamR.Enabled = false;
             BtnDisCamR.Enabled = true;
         }
 
         private void BtnDisCamR_Click(object sender, EventArgs e)
         {
+            BtnDisCamR.Enabled = false;
             DisconnectServer(CameraClientR);
             BtnConCamR.Enabled = true;
-            BtnDisCamR.Enabled = false;
         }
 
         private async void BtnSendR_Click(object sender, EventArgs e)
@@ -320,8 +311,7 @@ namespace ROBOT_WINFORM
             BtnSendR.Enabled = false;
             byte[] buffer = new byte[1024];
             string command = TxtCommandR.Text.Trim();
-            await SendCommand(CameraClientR, command, "CameraR");
-            await ReceiveData(CameraClientR, "CameraR", buffer);
+            await SendReceiveData(CameraClient, command,"CameraR", buffer);
             BtnSendR.Enabled = true;
         }
 
@@ -330,22 +320,12 @@ namespace ROBOT_WINFORM
             Decreasing = true;
             while (Decreasing)
             {
+                _ = double.TryParse(TxtX.Text, out double x);
                 byte[] buffer = new byte[1024];
-                /*string receivedDataRobot = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
-                string[] p = receivedDataRobot.Split(' ');*/
-                await SendReceiveData(RobotClient, $"{Convert.ToDouble(TxtX.Text) + Convert.ToDouble(StepX.Text)},{TxtY.Text},{TxtZ.Text},{TxtRx.Text},{TxtRy.Text},{TxtRz.Text},{TxtF.Text},", "Robot", buffer);
-                TxtX.Text = Convert.ToString(Convert.ToDouble(TxtX.Text) + Convert.ToDouble(StepX.Text));
-                /*await ActivateRobot($"{Convert.ToDouble(p[0]) + Convert.ToDouble(StepX.Text)},{p[1]},{p[2]},{p[5]},{p[3]},{p[4]}", Convert.ToDouble(p[6]));*/
-                /*            string receivedDataRobot1 = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
-                            string[] p1 = receivedDataRobot1.Split(' ');
-                            Console.WriteLine(p1);
-                            TxtX.Text = p1[0];
-                            TxtY.Text = p1[1];
-                            TxtZ.Text = p1[2];
-                            TxtRx.Text = p1[3];
-                            TxtRy.Text = p1[4];
-                            TxtRz.Text = p1[5];
-                            TxtF.Text = p1[6];*/
+                //x += Convert.ToDouble(StepX.Text);
+                x += 3;
+                await SendReceiveData(RobotClient, $"{x},{TxtY.Text},{TxtZ.Text},{TxtRx.Text},{TxtRy.Text},{TxtRz.Text},{TxtF.Text},", "Robot", buffer);
+                TxtX.Text = x.ToString();
             }
         }
 
@@ -357,14 +337,16 @@ namespace ROBOT_WINFORM
 
         private async void DownX_MouseDown(object sender, MouseEventArgs e)
         {
+            double i = Convert.ToDouble(StepX.Text);
             Decreasing = true;
             while (Decreasing)
             {
+                _ = double.TryParse(TxtX.Text, out double x);
                 byte[] buffer = new byte[1024];
-                /*string receivedDataRobot = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
-                string[] p = receivedDataRobot.Split(' ');*/
-                await SendReceiveData(RobotClient, $"{Convert.ToDouble(TxtX.Text) + Convert.ToDouble(StepX.Text)},{TxtY.Text},{TxtZ.Text},{TxtRx.Text},{TxtRy.Text},{TxtRz.Text},{TxtF.Text},", "Robot", buffer);
-                TxtX.Text = Convert.ToString(Convert.ToDouble(TxtX.Text) + Convert.ToDouble(StepX.Text));
+                //x -= Convert.ToDouble(StepX.Text);
+                x -= 3;
+                await SendReceiveData(RobotClient, $"{x},{TxtY.Text},{TxtZ.Text},{TxtRx.Text},{TxtRy.Text},{TxtRz.Text},{TxtF.Text},", "Robot", buffer);
+                TxtX.Text = x.ToString();
             }
         }
 
@@ -374,108 +356,111 @@ namespace ROBOT_WINFORM
             await Task.Delay(500);
         }
 
-
-
         private async void UpY_MouseDown(object sender, MouseEventArgs e)
         {
-            byte[] buffer = new byte[1024];
-            string receivedDataRobot = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
-            string[] p = receivedDataRobot.Split(' ');
-            await ActivateRobot($"{p[0]},{Convert.ToDouble(p[1]) + Convert.ToDouble(StepY.Text)},{p[2]},{p[3]},{p[4]},{p[5]}", Convert.ToDouble(p[6]));
-            /* string receivedDataRobot1 = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
-             string[] p1 = receivedDataRobot1.Split(' ');
-             TxtX.Text = p1[0];
-             TxtY.Text = p1[1];
-             TxtZ.Text = p1[2];
-             TxtRx.Text = p1[3];
-             TxtRy.Text = p1[4];
-             TxtRz.Text = p1[5];
-             TxtF.Text = p1[6];*/
+            Decreasing = true;
+            while (Decreasing)
+            {
+                byte[] buffer = new byte[1024];
+                TxtY.Text = Convert.ToString(Convert.ToDouble(TxtY.Text) + Convert.ToDouble(StepY.Text));
+                await SendReceiveData(RobotClient, $"{TxtX.Text},{TxtY.Text},{TxtZ.Text},{TxtRx.Text},{TxtRy.Text},{TxtRz.Text},{TxtF.Text},", "Robot", buffer);
+
+            }
+        }
+
+        private async void UpY_MouseUp(object sender, MouseEventArgs e)
+        {
+            Decreasing = false;
+            await Task.Delay(500);
         }
 
         private async void DownY_MouseDown(object sender, MouseEventArgs e)
         {
-            byte[] buffer = new byte[1024];
-            string receivedDataRobot = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
-            string[] p = receivedDataRobot.Split(' ');
-            await ActivateRobot($"{p[0]},{Convert.ToDouble(p[1]) - Convert.ToDouble(StepY)},{p[2]},{p[3]},{p[4]},{p[5]}", Convert.ToDouble(p[6]));
-            string receivedDataRobot1 = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
-            string[] p1 = receivedDataRobot1.Split(' ');
-            TxtX.Text = p1[0];
-            TxtY.Text = p1[1];
-            TxtZ.Text = p1[2];
-            TxtRx.Text = p1[3];
-            TxtRy.Text = p1[4];
-            TxtRz.Text = p1[5];
-            TxtF.Text = p1[6];
+            Decreasing = true;
+            while (Decreasing)
+            {
+                byte[] buffer = new byte[1024];
+                TxtY.Text = Convert.ToString(Convert.ToDouble(TxtY.Text) - Convert.ToDouble(StepY.Text));
+                await SendReceiveData(RobotClient, $"{TxtX.Text},{TxtY.Text},{TxtZ.Text},{TxtRx.Text},{TxtRy.Text},{TxtRz.Text},{TxtF.Text},", "Robot", buffer);
+
+            }
+        }
+
+        private async void DownY_MouseUp(object sender, MouseEventArgs e)
+        {
+            Decreasing = false;
+            await Task.Delay(500);
         }
 
         private async void UpZ_MouseDown(object sender, MouseEventArgs e)
         {
-            byte[] buffer = new byte[1024];
-            string receivedDataRobot = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
-            string[] p = receivedDataRobot.Split(' ');
-            await ActivateRobot($"{p[0]},{p[1]},{Convert.ToDouble(p[2]) + Convert.ToDouble(StepZ)},{p[3]},{p[4]},{p[5]}", Convert.ToDouble(p[6]));
-            string receivedDataRobot1 = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
-            string[] p1 = receivedDataRobot1.Split(' ');
-            TxtX.Text = p1[0];
-            TxtY.Text = p1[1];
-            TxtZ.Text = p1[2];
-            TxtRx.Text = p1[3];
-            TxtRy.Text = p1[4];
-            TxtRz.Text = p1[5];
-            TxtF.Text = p1[6];
+            Decreasing = true;
+            while (Decreasing)
+            {
+                byte[] buffer = new byte[1024];
+                TxtZ.Text = Convert.ToString(Convert.ToDouble(TxtZ.Text) + Convert.ToDouble(StepZ.Text));
+                await SendReceiveData(RobotClient, $"{TxtX.Text},{TxtY.Text},{TxtZ.Text},{TxtRx.Text},{TxtRy.Text},{TxtRz.Text},{TxtF.Text},", "Robot", buffer);
+
+            }
+        }
+
+        private async void UpZ_MouseUp(object sender, MouseEventArgs e)
+        {
+            Decreasing = false;
+            await Task.Delay(500);
         }
 
         private async void DownZ_MouseDown(object sender, MouseEventArgs e)
         {
-            byte[] buffer = new byte[1024];
-            string receivedDataRobot = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
-            string[] p = receivedDataRobot.Split(' ');
-            await ActivateRobot($"{p[0]},{p[1]},{Convert.ToDouble(p[2]) - Convert.ToDouble(StepZ)},{p[3]},{p[4]},{p[5]}", Convert.ToDouble(p[6]));
-            string receivedDataRobot1 = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
-            string[] p1 = receivedDataRobot1.Split(' ');
-            TxtX.Text = p1[0];
-            TxtY.Text = p1[1];
-            TxtZ.Text = p1[2];
-            TxtRx.Text = p1[3];
-            TxtRy.Text = p1[4];
-            TxtRz.Text = p1[5];
-            TxtF.Text = p1[6];
+            Decreasing = true;
+            while (Decreasing)
+            {
+                byte[] buffer = new byte[1024];
+                TxtZ.Text = Convert.ToString(Convert.ToDouble(TxtZ.Text) - Convert.ToDouble(StepZ.Text));
+                await SendReceiveData(RobotClient, $"{TxtX.Text},{TxtY.Text},{TxtZ.Text},{TxtRx.Text},{TxtRy.Text},{TxtRz.Text},{TxtF.Text},", "Robot", buffer);
+            }
+        }
+
+        private async void DownZ_MouseUp(object sender, MouseEventArgs e)
+        {
+            Decreasing = false;
+            await Task.Delay(500);
         }
 
         private async void UpRZ_MouseDown(object sender, MouseEventArgs e)
         {
-            byte[] buffer = new byte[1024];
-            string receivedDataRobot = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
-            string[] p = receivedDataRobot.Split(' ');
-            await ActivateRobot($"{p[0]},{p[1]},{p[2]},{p[3]},{p[4]},{Convert.ToDouble(p[5]) + Convert.ToDouble(StepRz)}", Convert.ToDouble(p[6]));
-            string receivedDataRobot1 = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
-            string[] p1 = receivedDataRobot1.Split(' ');
-            TxtX.Text = p1[0];
-            TxtY.Text = p1[1];
-            TxtZ.Text = p1[2];
-            TxtRx.Text = p1[3];
-            TxtRy.Text = p1[4];
-            TxtRz.Text = p1[5];
-            TxtF.Text = p1[6];
+            Decreasing = true;
+            while (Decreasing)
+            {
+                byte[] buffer = new byte[1024];
+                TxtRz.Text = Convert.ToString(Convert.ToDouble(TxtRz.Text) + Convert.ToDouble(StepRz.Text));
+                await SendReceiveData(RobotClient, $"{TxtX.Text},{TxtY.Text},{TxtZ.Text},{TxtRx.Text},{TxtRy.Text},{TxtRz.Text},{TxtF.Text},", "Robot", buffer);
+
+            }
+        }
+
+        private async void UpRz_MouseUp(object sender, MouseEventArgs e)
+        {
+            Decreasing = false;
+            await Task.Delay(500);
         }
 
         private async void DownRZ_MouseDown(object sender, MouseEventArgs e)
         {
-            byte[] buffer = new byte[1024];
-            string receivedDataRobot = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
-            string[] p = receivedDataRobot.Split(' ');
-            await ActivateRobot($"{p[0]},{p[1]},{p[2]},{p[3]},{p[4]},{Convert.ToDouble(p[5]) - Convert.ToDouble(StepRz)}", Convert.ToDouble(p[6]));
-            string receivedDataRobot1 = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
-            string[] p1 = receivedDataRobot1.Split(' ');
-            TxtX.Text = p1[0];
-            TxtY.Text = p1[1];
-            TxtZ.Text = p1[2];
-            TxtRx.Text = p1[3];
-            TxtRy.Text = p1[4];
-            TxtRz.Text = p1[5];
-            TxtF.Text = p1[6];
+            Decreasing = true;
+            while (Decreasing)
+            {
+                byte[] buffer = new byte[1024];
+                TxtRz.Text = Convert.ToString(Convert.ToDouble(TxtRz.Text) - Convert.ToDouble(StepRz.Text));
+                await SendReceiveData(RobotClient, $"{TxtX.Text},{TxtY.Text},{TxtZ.Text},{TxtRx.Text},{TxtRy.Text},{TxtRz.Text},{TxtF.Text},", "Robot", buffer);
+
+            }
+        }
+
+        private async void DownRz_MouseUp(object sender, MouseEventArgs e)
+        {
+            Decreasing = false;
+            await Task.Delay(500);
         }
 
         private async void BtnTrainPosTrigger_Click(object sender, EventArgs e)
@@ -489,7 +474,6 @@ namespace ROBOT_WINFORM
                 MessageBox.Show($"Training trigger part Pos {TxtPart.Text} successfully");
                 poss[Convert.ToInt16(TxtPart.Text) - 1, 0] = "1";
                 poss[Convert.ToInt16(TxtPart.Text) - 1, 1] = string.Join(",", p);
-                //poss[Convert.ToInt16(TxtPart.Text) - 1, 1] = $"{p[0]},{p[1]},{p[2]},{p[3]},{p[4]},{p[5]},";
             }
             else
             {
@@ -502,9 +486,6 @@ namespace ROBOT_WINFORM
         {
             byte[] buffer = new byte[1024];
             string receivedDataRobot = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
-            /*            int LastIndex = receivedDataRobot.LastIndexOf(' ');
-                        fig = Convert.ToDouble(receivedDataRobot.Substring(LastIndex + 1));
-                        receivedDataRobot = receivedDataRobot.Substring(0, LastIndex);*/
             string[] p = receivedDataRobot.Split(' ');
             fig = Convert.ToDouble(p[6]);
             string receivedDataCamera = await SendReceiveData(CameraClient, $"TTR,{TxtPart.Text},{p[0]},{p[1]},{p[2]},{p[5]},{p[4]},{p[3]}", "Camera", buffer);
@@ -553,7 +534,7 @@ namespace ROBOT_WINFORM
 
             if (poss[Convert.ToInt16(TextPartRuntime.Text) - 1, 4] == "1")
             {
-                byte[] buffer = new byte[1024];
+
                 await ActivateRobot(poss[Convert.ToInt16(TxtPart.Text) - 1, 5], fig);
             }
             else
@@ -575,7 +556,5 @@ namespace ROBOT_WINFORM
                 MessageBox.Show("Pos trigger not training");
             }
         }
-
-
     }
 }
