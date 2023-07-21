@@ -122,7 +122,7 @@
             TxtIpRobot.Name = "TxtIpRobot";
             TxtIpRobot.Size = new Size(119, 23);
             TxtIpRobot.TabIndex = 1;
-            TxtIpRobot.Text = "192.168.1.30";
+            TxtIpRobot.Text = "172.20.90.108";
             // 
             // BtnConRobot
             // 
@@ -228,7 +228,7 @@
             TxtIpCam.Name = "TxtIpCam";
             TxtIpCam.Size = new Size(134, 23);
             TxtIpCam.TabIndex = 1;
-            TxtIpCam.Text = "192.168.1.10";
+            TxtIpCam.Text = "172.20.90.108";
             // 
             // TxtPortCam
             // 
@@ -237,7 +237,7 @@
             TxtPortCam.Name = "TxtPortCam";
             TxtPortCam.Size = new Size(134, 23);
             TxtPortCam.TabIndex = 1;
-            TxtPortCam.Text = "5001";
+            TxtPortCam.Text = "5002";
             // 
             // BtnConCam
             // 
@@ -662,6 +662,7 @@
             UpRz.TabIndex = 2;
             UpRz.Text = "+";
             UpRz.UseVisualStyleBackColor = true;
+            UpRz.MouseDown += UpZ_MouseDown;
             UpRz.MouseUp += UpZ_MouseUp;
             // 
             // UpZ

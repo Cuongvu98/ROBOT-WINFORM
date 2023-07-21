@@ -443,7 +443,7 @@ namespace ROBOT_WINFORM
             while (Decreasing)
             {
                 byte[] buffer = new byte[1024];
-                string receivedDataRobot = await SendReceiveData(RobotClient, $"{TxtX.Text},{TxtX.Text},{TxtX.Text},{TxtRx.Text},{TxtRy.Text},{k},{TxtF.Text},", "Robot", buffer);
+                string receivedDataRobot = await SendReceiveData(RobotClient, $"{TxtX.Text},{TxtY.Text},{TxtZ.Text},{TxtRx.Text},{TxtRy.Text},{k},{TxtF.Text},", "Robot", buffer);
                 string[] p = receivedDataRobot.Split(' ');
                 TxtRz.Text = p[5];
                 k = k + h;
@@ -463,7 +463,7 @@ namespace ROBOT_WINFORM
             while (Decreasing)
             {
                 byte[] buffer = new byte[1024];
-                string receivedDataRobot = await SendReceiveData(RobotClient, $"{TxtX.Text},{TxtX.Text},{TxtX.Text},{TxtRx.Text},{TxtRy.Text},{k},{TxtF.Text},", "Robot", buffer);
+                string receivedDataRobot = await SendReceiveData(RobotClient, $"{TxtX.Text},{TxtY.Text},{TxtZ.Text},{TxtRx.Text},{TxtRy.Text},{k},{TxtF.Text},", "Robot", buffer);
                 string[] p = receivedDataRobot.Split(' ');
                 TxtRz.Text = p[5];
                 k = k - h;
@@ -573,5 +573,6 @@ namespace ROBOT_WINFORM
         {
 
         }
+
     }
 }
