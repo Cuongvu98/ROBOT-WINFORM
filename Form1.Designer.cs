@@ -608,6 +608,8 @@
             DownRz.TabIndex = 2;
             DownRz.Text = "-";
             DownRz.UseVisualStyleBackColor = true;
+            DownRz.MouseDown += DownRz_MouseDown;
+            DownRz.MouseUp += DownRz_MouseUp;
             // 
             // DownZ
             // 
@@ -617,6 +619,8 @@
             DownZ.TabIndex = 2;
             DownZ.Text = "-";
             DownZ.UseVisualStyleBackColor = true;
+            DownZ.MouseDown += DownZ_MouseDown;
+            DownZ.MouseUp += DownZ_MouseUp;
             // 
             // DownY
             // 
@@ -626,6 +630,8 @@
             DownY.TabIndex = 2;
             DownY.Text = "-";
             DownY.UseVisualStyleBackColor = true;
+            DownY.MouseDown += DownY_MouseDown;
+            DownY.MouseUp += DownY_MouseUp;
             // 
             // DownX
             // 
@@ -655,6 +661,7 @@
             UpRz.TabIndex = 2;
             UpRz.Text = "+";
             UpRz.UseVisualStyleBackColor = true;
+            UpRz.MouseUp += UpZ_MouseUp;
             // 
             // UpZ
             // 
@@ -664,6 +671,8 @@
             UpZ.TabIndex = 2;
             UpZ.Text = "+";
             UpZ.UseVisualStyleBackColor = true;
+            UpZ.MouseDown += UpZ_MouseDown;
+            UpZ.MouseUp += UpZ_MouseUp;
             // 
             // UpY
             // 
@@ -673,6 +682,8 @@
             UpY.TabIndex = 2;
             UpY.Text = "+";
             UpY.UseVisualStyleBackColor = true;
+            UpY.MouseDown += DownY_MouseDown;
+            UpY.MouseUp += UpY_MouseUp;
             // 
             // UpX
             // 

@@ -311,28 +311,27 @@ namespace ROBOT_WINFORM
             BtnSendR.Enabled = false;
             byte[] buffer = new byte[1024];
             string command = TxtCommandR.Text.Trim();
-            await SendReceiveData(CameraClient, command,"CameraR", buffer);
+            await SendReceiveData(CameraClient, command, "CameraR", buffer);
             BtnSendR.Enabled = true;
         }
 
         private async void UpX_MouseDown(object sender, MouseEventArgs e)
         {
             Decreasing = true;
+            double.TryParse(TxtX.Text, out double x);
+           /* double.TryParse(TxtY.Text, out double y);
+            double.TryParse(TxtZ.Text, out double z);
+            double.TryParse(TxtRx.Text, out double rx);
+            double.TryParse(TxtRy.Text, out double ry);
+            double.TryParse(TxtRz.Text, out double rz);
+            double.TryParse(TxtF.Text, out double fig);*/
+            double.TryParse(StepX.Text, out double h);
             while (Decreasing)
             {
                 byte[] buffer = new byte[1024];
-                string data = await SendReceiveData(RobotClient, $"{Convert.ToDouble(TxtX) + Convert.ToDouble(StepX.Text)},{TxtY.Text},{TxtZ.Text},{TxtRx.Text},{TxtRy.Text},{TxtRz.Text},{TxtF.Text},", "Robot", buffer);
-                string[] p = data.Split(' ');
-                if (p.Length >= 6)
-                {
-                    TxtX.Text = p[0];
-                    TxtY.Text = p[1];
-                    TxtZ.Text = p[2];
-                    TxtRx.Text = p[3];
-                    TxtRy.Text = p[4];
-                    TxtRz.Text = p[5];
-                    TxtF.Text = p[6];
-                }
+                x += h;
+                await SendReceiveData(RobotClient, $"{x},{TxtY.Text},{TxtZ.Text},{TxtRx.Text},{TxtRy.Text},{TxtRz.Text},{TxtF.Text},", "Robot", buffer);
+                TxtX.Text = x.ToString();
             }
         }
 
@@ -345,22 +344,22 @@ namespace ROBOT_WINFORM
         private async void DownX_MouseDown(object sender, MouseEventArgs e)
         {
             Decreasing = true;
+            double.TryParse(TxtX.Text, out double x);
+            /* double.TryParse(TxtY.Text, out double y);
+             double.TryParse(TxtZ.Text, out double z);
+             double.TryParse(TxtRx.Text, out double rx);
+             double.TryParse(TxtRy.Text, out double ry);
+             double.TryParse(TxtRz.Text, out double rz);
+             double.TryParse(TxtF.Text, out double fig);*/
+            double.TryParse(StepX.Text, out double h);
             while (Decreasing)
             {
                 byte[] buffer = new byte[1024];
-                string data = await SendReceiveData(RobotClient, $"{Convert.ToDouble(TxtX) - Convert.ToDouble(StepX.Text)},{TxtY.Text},{TxtZ.Text},{TxtRx.Text},{TxtRy.Text},{TxtRz.Text},{TxtF.Text},", "Robot", buffer);
-                string[] p = data.Split(' ');
-                if (p.Length >= 6)
-                {
-                    TxtX.Text = p[0];
-                    TxtY.Text = p[1];
-                    TxtZ.Text = p[2];
-                    TxtRx.Text = p[3];
-                    TxtRy.Text = p[4];
-                    TxtRz.Text = p[5];
-                    TxtF.Text = p[6];
-                }
+                x -= h;
+                await SendReceiveData(RobotClient, $"{x},{TxtY.Text},{TxtZ.Text},{TxtRx.Text},{TxtRy.Text},{TxtRz.Text},{TxtF.Text},", "Robot", buffer);
+                TxtX.Text = x.ToString();
             }
+            
         }
 
         private async void DownX_MouseUp(object sender, MouseEventArgs e)
@@ -458,7 +457,7 @@ namespace ROBOT_WINFORM
             await Task.Delay(500);
         }
 
-        private async void DownRZ_MouseDown(object sender, MouseEventArgs e)
+        private async void DownRz_MouseDown(object sender, MouseEventArgs e)
         {
             Decreasing = true;
             while (Decreasing)
@@ -569,5 +568,6 @@ namespace ROBOT_WINFORM
                 MessageBox.Show("Pos trigger not training");
             }
         }
+
     }
 }
