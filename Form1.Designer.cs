@@ -182,6 +182,7 @@
             TxtPortRobot.Size = new Size(119, 23);
             TxtPortRobot.TabIndex = 1;
             TxtPortRobot.Text = "5001";
+            TxtPortRobot.TextChanged += TxtPortRobot_TextChanged;
             // 
             // BtnDisRobot
             // 
@@ -682,7 +683,7 @@
             UpY.TabIndex = 2;
             UpY.Text = "+";
             UpY.UseVisualStyleBackColor = true;
-            UpY.MouseDown += DownY_MouseDown;
+            UpY.MouseDown += UpY_MouseDown;
             UpY.MouseUp += UpY_MouseUp;
             // 
             // UpX
