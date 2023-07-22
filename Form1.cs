@@ -225,35 +225,35 @@ namespace ROBOT_WINFORM
             }
             string command = $"ACB,1,1,{X},{Y},{Z},{Rz},{Ry},{Rx}";
             byte[] buffer = new byte[1024];
-            await SendCommand(CameraClient, command, "Camera");
-            string receivedDataCam = await ReceiveData(CameraClient, "Camera", buffer);
+            /*         await SendCommand(CameraClient, command, "Camera");
+                     string receivedDataCam = await ReceiveData(CameraClient, "Camera", buffer);*/
+            string receivedDataCam = await SendReceiveData(CameraClient, command ,"Camera", buffer);
+
             if (receivedDataCam.Contains("ACB,2"))
             {
                 string NextPosition = receivedDataCam.Substring(6);
                 string result1 = await ActivateRobot(NextPosition, fig);
-                Console.WriteLine("robot responsive ==>" + result1);
+                await Task.Delay(500);
+                //Console.WriteLine("robot responsive ==>" + result1);
                 if (result1 != "")
                 {
                     string commandNextPosition = "AC,1,1," + result1;
-                    await SendCommand(CameraClient, commandNextPosition, "Camera");
-                    string CamResponse = await ReceiveData(CameraClient, "Camera", buffer);
-                    Console.WriteLine("Cam phan hoi==>" + CamResponse);
+                    //await SendCommand(CameraClient, commandNextPosition, "Camera");
+                    string CamResponse = await SendReceiveData(CameraClient, commandNextPosition, "Camera", buffer);
+                    //Console.WriteLine("Cam phan hoi==>" + CamResponse);
                     while (CamResponse.Contains("AC,2"))
                     {
                         NextPosition = CamResponse.Substring(5);
                         string result2 = await ActivateRobot(NextPosition, fig);
-
+                        await Task.Delay(500);
                         if (result2 != "")
                         {
                             string commandNextPosition2 = "AC,1,1," + result2;
-                            await SendCommand(CameraClient, commandNextPosition2, "Camera");
-                            CamResponse = await ReceiveData(CameraClient, "Camera", buffer);
-                            Console.WriteLine(CamResponse);
-                            await Task.Delay(500);
-
+                            //await SendCommand(CameraClient, commandNextPosition2, "Camera");
+                            CamResponse = await SendReceiveData(CameraClient, commandNextPosition2, "Camera", buffer);
+                            //Console.WriteLine(CamResponse);
                         }
                     }
-
                     if (CamResponse.Contains("AC,1"))
                     {
                         MessageBox.Show("Calib Done");
