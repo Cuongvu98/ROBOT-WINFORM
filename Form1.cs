@@ -319,7 +319,7 @@ namespace ROBOT_WINFORM
         {
             double X = 200;
             byte[] buffer = new byte[1024];
-            string receivedDataRobot = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
+            string receivedDataRobot = await SendReceiveData(RobotClient, "1,0,0,0,0,0,1,", "Robot", buffer);
             if (receivedDataRobot == "OK")
             {
             await SendCommand(RobotClient, "{X},{TxtY.Text},{TxtZ.Text},{TxtRx.Text},{TxtRy.Text},{TxtRz.Text},{TxtF.Text},,", "Robot");
