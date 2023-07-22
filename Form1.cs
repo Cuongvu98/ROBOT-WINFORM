@@ -317,22 +317,32 @@ namespace ROBOT_WINFORM
 
         private async void UpX_MouseDown(object sender, MouseEventArgs e)
         {
-            Decreasing = true;
-            double.TryParse(TxtX.Text, out double k);
-            double.TryParse(StepX.Text, out double h);
-            while (Decreasing)
+            double X = 200;
+            byte[] buffer = new byte[1024];
+            string receivedDataRobot = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
+            if (receivedDataRobot == "OK")
             {
-                byte[] buffer = new byte[1024];
-                string receivedDataRobot = await SendReceiveData(RobotClient, $"{k},{TxtY.Text},{TxtZ.Text},{TxtRx.Text},{TxtRy.Text},{TxtRz.Text},{TxtF.Text},", "Robot", buffer);
-                string[] p = receivedDataRobot.Split(' ');
-                TxtX.Text = p[0];
-                k = k + h;
+            await SendCommand(RobotClient, "{X},{TxtY.Text},{TxtZ.Text},{TxtRx.Text},{TxtRy.Text},{TxtRz.Text},{TxtF.Text},,", "Robot");
             }
+            else
+                MessageBox.Show("Lỗi robot di chuyển");
         }
 
-        private void UpX_MouseUp(object sender, MouseEventArgs e)
+        private async void UpX_MouseUp(object sender, MouseEventArgs e)
         {
-            Decreasing = false;
+            byte[] buffer = new byte[1024];
+            string receivedDataRobot = await SendReceiveData(RobotClient, "0,0,0,0,0,0,1,", "Robot", buffer);
+            string[] p = receivedDataRobot.Split(' ');
+            if (p.Length >= 6)
+            {
+                TxtX.Text = p[0];
+                TxtY.Text = p[1];
+                TxtZ.Text = p[2];
+                TxtRx.Text = p[3];
+                TxtRy.Text = p[4];
+                TxtRz.Text = p[5];
+                TxtF.Text = p[6];
+            }
         }
 
         private async void DownX_MouseDown(object sender, MouseEventArgs e)
